@@ -1,0 +1,25 @@
+/* CSS for the image-list-left layout */
+
+.image-text-group {
+    overflow:hidden;
+    zoom:1;
+}
+
+.exhibit-item {
+    float:left; 
+	    width:260px;
+}
+.exhibit-item-caption p{
+	width:240px;
+	margin-bottom:10px;
+	font-weight:700;
+	font-size:90%;
+}
+
+.exhibit-item img {
+    width:240px;
+}
+
+.exhibit-text {
+    
+}

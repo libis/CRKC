@@ -1,0 +1,1314 @@
+2012-08-16T07:38:21-04:00 WARN (4): Omeka_Storage_Adapter_Filesystem: Tried to delete missing file 'files/13635be54f7a1d83059809be9103bf32.jpg'.
+2012-08-16T07:38:21-04:00 ERR (3): exception 'Omeka_File_Derivative_Exception' with message 'Something went wrong with image creation.  Please notify an administrator.' in /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php:189
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(113): Omeka_File_Derivative_Image::createImage('/www/libis/vol0...', '800', 'fullsize')
+#1 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(222): Omeka_File_Derivative_Image::createDerivativeImages('/www/libis/vol0...')
+#2 /www/libis/html/crkc/application/models/File.php(248): Omeka_File_Derivative_Image::createAll('/www/libis/vol0...', 'image/jpeg')
+#3 /www/libis/html/crkc/application/models/File/ProcessUploadJob.php(24): File->createDerivatives()
+#4 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Adapter/Synchronous.php(25): File_ProcessUploadJob->perform()
+#5 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Default.php(95): Omeka_Job_Dispatcher_Adapter_Synchronous->send('{"className":"F...', Array)
+#6 /www/libis/html/crkc/application/models/File.php(70): Omeka_Job_Dispatcher_Default->send('File_ProcessUpl...', Array)
+#7 [internal function]: File->afterInsert()
+#8 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#9 /www/libis/html/crkc/application/libraries/Omeka/Record.php(561): Omeka_Record->runCallbacks('afterInsert')
+#10 /www/libis/html/crkc/application/libraries/Omeka/Record.php(581): Omeka_Record->save()
+#11 /www/libis/html/crkc/application/models/Item.php(303): Omeka_Record->forceSave()
+#12 /www/libis/html/crkc/application/models/ItemBuilder.php(213): Item->saveFiles()
+#13 /www/libis/html/crkc/application/libraries/globals.php(505): ItemBuilder->addFiles('Upload', 'file', Array)
+#14 /www/libis/html/crkc/application/models/Item.php(286): insert_files_for_item(Object(Item), 'Upload', 'file', Array)
+#15 /www/libis/html/crkc/application/models/Item.php(153): Item->_uploadFiles()
+#16 [internal function]: Item->beforeSaveForm(Object(ArrayObject))
+#17 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#18 /www/libis/html/crkc/application/libraries/Omeka/Record.php(803): Omeka_Record->runCallbacks('beforeSaveForm', Object(ArrayObject))
+#19 /www/libis/html/crkc/application/libraries/Omeka/Controller/Action.php(482): Omeka_Record->saveForm(Array)
+#20 /www/libis/html/crkc/application/controllers/ItemsController.php(99): Omeka_Controller_Action->editAction()
+#21 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): ItemsController->editAction()
+#22 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('editAction')
+#23 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#24 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#25 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#26 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#27 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#28 {main}
+2012-08-16T07:39:51-04:00 WARN (4): Omeka_Storage_Adapter_Filesystem: Tried to delete missing file 'files/d071a1705df437b2695768b66329e564.jpg'.
+2012-08-16T07:39:51-04:00 ERR (3): exception 'Omeka_File_Derivative_Exception' with message 'Something went wrong with image creation.  Please notify an administrator.' in /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php:189
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(113): Omeka_File_Derivative_Image::createImage('/tmp/d071a1705d...', '800', 'fullsize')
+#1 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(222): Omeka_File_Derivative_Image::createDerivativeImages('/tmp/d071a1705d...')
+#2 /www/libis/html/crkc/application/models/File.php(248): Omeka_File_Derivative_Image::createAll('/tmp/d071a1705d...', 'image/jpeg')
+#3 /www/libis/html/crkc/application/models/File/ProcessUploadJob.php(24): File->createDerivatives()
+#4 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Adapter/Synchronous.php(25): File_ProcessUploadJob->perform()
+#5 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Default.php(95): Omeka_Job_Dispatcher_Adapter_Synchronous->send('{"className":"F...', Array)
+#6 /www/libis/html/crkc/application/models/File.php(70): Omeka_Job_Dispatcher_Default->send('File_ProcessUpl...', Array)
+#7 [internal function]: File->afterInsert()
+#8 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#9 /www/libis/html/crkc/application/libraries/Omeka/Record.php(561): Omeka_Record->runCallbacks('afterInsert')
+#10 /www/libis/html/crkc/application/libraries/Omeka/Record.php(581): Omeka_Record->save()
+#11 /www/libis/html/crkc/application/models/Item.php(303): Omeka_Record->forceSave()
+#12 /www/libis/html/crkc/application/models/ItemBuilder.php(213): Item->saveFiles()
+#13 /www/libis/html/crkc/application/libraries/globals.php(505): ItemBuilder->addFiles('Upload', 'file', Array)
+#14 /www/libis/html/crkc/application/models/Item.php(286): insert_files_for_item(Object(Item), 'Upload', 'file', Array)
+#15 /www/libis/html/crkc/application/models/Item.php(153): Item->_uploadFiles()
+#16 [internal function]: Item->beforeSaveForm(Object(ArrayObject))
+#17 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#18 /www/libis/html/crkc/application/libraries/Omeka/Record.php(803): Omeka_Record->runCallbacks('beforeSaveForm', Object(ArrayObject))
+#19 /www/libis/html/crkc/application/libraries/Omeka/Controller/Action.php(482): Omeka_Record->saveForm(Array)
+#20 /www/libis/html/crkc/application/controllers/ItemsController.php(99): Omeka_Controller_Action->editAction()
+#21 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): ItemsController->editAction()
+#22 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('editAction')
+#23 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#24 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#25 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#26 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#27 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#28 {main}
+2012-08-16T07:40:17-04:00 WARN (4): Omeka_Storage_Adapter_Filesystem: Tried to delete missing file 'files/3a641d2e33ff67c76b8feb41bfd8a093.jpg'.
+2012-08-16T07:40:17-04:00 ERR (3): exception 'Omeka_File_Derivative_Exception' with message 'Something went wrong with image creation.  Please notify an administrator.' in /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php:189
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(113): Omeka_File_Derivative_Image::createImage('/www/libis/vol0...', '800', 'fullsize')
+#1 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(222): Omeka_File_Derivative_Image::createDerivativeImages('/www/libis/vol0...')
+#2 /www/libis/html/crkc/application/models/File.php(248): Omeka_File_Derivative_Image::createAll('/www/libis/vol0...', 'image/jpeg')
+#3 /www/libis/html/crkc/application/models/File/ProcessUploadJob.php(24): File->createDerivatives()
+#4 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Adapter/Synchronous.php(25): File_ProcessUploadJob->perform()
+#5 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Default.php(95): Omeka_Job_Dispatcher_Adapter_Synchronous->send('{"className":"F...', Array)
+#6 /www/libis/html/crkc/application/models/File.php(70): Omeka_Job_Dispatcher_Default->send('File_ProcessUpl...', Array)
+#7 [internal function]: File->afterInsert()
+#8 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#9 /www/libis/html/crkc/application/libraries/Omeka/Record.php(561): Omeka_Record->runCallbacks('afterInsert')
+#10 /www/libis/html/crkc/application/libraries/Omeka/Record.php(581): Omeka_Record->save()
+#11 /www/libis/html/crkc/application/models/Item.php(303): Omeka_Record->forceSave()
+#12 /www/libis/html/crkc/application/models/ItemBuilder.php(213): Item->saveFiles()
+#13 /www/libis/html/crkc/application/libraries/globals.php(505): ItemBuilder->addFiles('Upload', 'file', Array)
+#14 /www/libis/html/crkc/application/models/Item.php(286): insert_files_for_item(Object(Item), 'Upload', 'file', Array)
+#15 /www/libis/html/crkc/application/models/Item.php(153): Item->_uploadFiles()
+#16 [internal function]: Item->beforeSaveForm(Object(ArrayObject))
+#17 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#18 /www/libis/html/crkc/application/libraries/Omeka/Record.php(803): Omeka_Record->runCallbacks('beforeSaveForm', Object(ArrayObject))
+#19 /www/libis/html/crkc/application/libraries/Omeka/Controller/Action.php(482): Omeka_Record->saveForm(Array)
+#20 /www/libis/html/crkc/application/controllers/ItemsController.php(99): Omeka_Controller_Action->editAction()
+#21 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): ItemsController->editAction()
+#22 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('editAction')
+#23 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#24 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#25 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#26 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#27 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#28 {main}
+2012-08-16T07:41:25-04:00 WARN (4): Omeka_Storage_Adapter_Filesystem: Tried to delete missing file 'files/a4b68476e71434b77c412e5e29648507.jpg'.
+2012-08-16T07:41:25-04:00 ERR (3): exception 'Omeka_File_Derivative_Exception' with message 'Something went wrong with image creation.  Please notify an administrator.' in /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php:189
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(113): Omeka_File_Derivative_Image::createImage('/www/libis/vol0...', '800', 'fullsize')
+#1 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(222): Omeka_File_Derivative_Image::createDerivativeImages('/www/libis/vol0...')
+#2 /www/libis/html/crkc/application/models/File.php(248): Omeka_File_Derivative_Image::createAll('/www/libis/vol0...', 'image/jpeg')
+#3 /www/libis/html/crkc/application/models/File/ProcessUploadJob.php(24): File->createDerivatives()
+#4 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Adapter/Synchronous.php(25): File_ProcessUploadJob->perform()
+#5 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Default.php(95): Omeka_Job_Dispatcher_Adapter_Synchronous->send('{"className":"F...', Array)
+#6 /www/libis/html/crkc/application/models/File.php(70): Omeka_Job_Dispatcher_Default->send('File_ProcessUpl...', Array)
+#7 [internal function]: File->afterInsert()
+#8 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#9 /www/libis/html/crkc/application/libraries/Omeka/Record.php(561): Omeka_Record->runCallbacks('afterInsert')
+#10 /www/libis/html/crkc/application/libraries/Omeka/Record.php(581): Omeka_Record->save()
+#11 /www/libis/html/crkc/application/models/Item.php(303): Omeka_Record->forceSave()
+#12 /www/libis/html/crkc/application/models/ItemBuilder.php(213): Item->saveFiles()
+#13 /www/libis/html/crkc/application/libraries/globals.php(505): ItemBuilder->addFiles('Upload', 'file', Array)
+#14 /www/libis/html/crkc/application/models/Item.php(286): insert_files_for_item(Object(Item), 'Upload', 'file', Array)
+#15 /www/libis/html/crkc/application/models/Item.php(153): Item->_uploadFiles()
+#16 [internal function]: Item->beforeSaveForm(Object(ArrayObject))
+#17 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#18 /www/libis/html/crkc/application/libraries/Omeka/Record.php(803): Omeka_Record->runCallbacks('beforeSaveForm', Object(ArrayObject))
+#19 /www/libis/html/crkc/application/libraries/Omeka/Controller/Action.php(482): Omeka_Record->saveForm(Array)
+#20 /www/libis/html/crkc/application/controllers/ItemsController.php(99): Omeka_Controller_Action->editAction()
+#21 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): ItemsController->editAction()
+#22 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('editAction')
+#23 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#24 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#25 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#26 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#27 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#28 {main}
+2012-08-16T07:46:10-04:00 WARN (4): Omeka_Storage_Adapter_Filesystem: Tried to delete missing file 'files/ad4d7482e94a22349a1131504779eb52.jpg'.
+2012-08-16T07:46:10-04:00 ERR (3): exception 'Omeka_File_Derivative_Exception' with message 'Something went wrong with image creation.  Please notify an administrator.' in /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php:189
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(113): Omeka_File_Derivative_Image::createImage('/www/libis/vol0...', '800', 'fullsize')
+#1 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(222): Omeka_File_Derivative_Image::createDerivativeImages('/www/libis/vol0...')
+#2 /www/libis/html/crkc/application/models/File.php(248): Omeka_File_Derivative_Image::createAll('/www/libis/vol0...', 'image/jpeg')
+#3 /www/libis/html/crkc/application/models/File/ProcessUploadJob.php(24): File->createDerivatives()
+#4 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Adapter/Synchronous.php(25): File_ProcessUploadJob->perform()
+#5 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Default.php(95): Omeka_Job_Dispatcher_Adapter_Synchronous->send('{"className":"F...', Array)
+#6 /www/libis/html/crkc/application/models/File.php(70): Omeka_Job_Dispatcher_Default->send('File_ProcessUpl...', Array)
+#7 [internal function]: File->afterInsert()
+#8 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#9 /www/libis/html/crkc/application/libraries/Omeka/Record.php(561): Omeka_Record->runCallbacks('afterInsert')
+#10 /www/libis/html/crkc/application/libraries/Omeka/Record.php(581): Omeka_Record->save()
+#11 /www/libis/html/crkc/application/models/Item.php(303): Omeka_Record->forceSave()
+#12 /www/libis/html/crkc/application/models/ItemBuilder.php(213): Item->saveFiles()
+#13 /www/libis/html/crkc/application/libraries/globals.php(505): ItemBuilder->addFiles('Upload', 'file', Array)
+#14 /www/libis/html/crkc/application/models/Item.php(286): insert_files_for_item(Object(Item), 'Upload', 'file', Array)
+#15 /www/libis/html/crkc/application/models/Item.php(153): Item->_uploadFiles()
+#16 [internal function]: Item->beforeSaveForm(Object(ArrayObject))
+#17 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#18 /www/libis/html/crkc/application/libraries/Omeka/Record.php(803): Omeka_Record->runCallbacks('beforeSaveForm', Object(ArrayObject))
+#19 /www/libis/html/crkc/application/libraries/Omeka/Controller/Action.php(482): Omeka_Record->saveForm(Array)
+#20 /www/libis/html/crkc/application/controllers/ItemsController.php(99): Omeka_Controller_Action->editAction()
+#21 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): ItemsController->editAction()
+#22 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('editAction')
+#23 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#24 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#25 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#26 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#27 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#28 {main}
+2012-08-16T14:40:58+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-16T15:41:14+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-17T12:24:17+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-17T12:31:12+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-17T12:32:27+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-17T13:24:18+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-17T14:47:28+02:00 ERR (3): exception 'Exception' with message 'Er is geen item ingesteld om op deze themapagina te worden getoond! Zie de Omeka-documentatie voor details.' in /www/libis/html/crkc/application/helpers/ItemFunctions.php:73
+Stack trace:
+#0 /www/libis/html/crkc/application/helpers/ItemFunctions.php(196): get_current_item()
+#1 /www/libis/html/crkc/plugins/Digitool/plugin.php(405): item('Dublin Core', 'Title')
+#2 /www/libis/html/crkc/themes/CRKC/custom.php(594): digitool_simple_gallery_array(Array)
+#3 /www/libis/html/crkc/themes/CRKC/simple-pages/page/show.php(28): Libis_loep_query('Kazuifel')
+#4 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#5 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#6 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('page/show.php')
+#7 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('page/show.php', NULL)
+#8 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#9 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#10 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#14 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#15 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#16 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#17 {main}
+2012-08-17T15:26:36+02:00 ERR (3): exception 'Exception' with message 'String could not be parsed as XML' in /www/libis/html/crkc/plugins/Digitool/views/admin/index/cgi.php:28
+Stack trace:
+#0 /www/libis/html/crkc/plugins/Digitool/views/admin/index/cgi.php(28): SimpleXMLElement->__construct('<!DOCTYPE HTML ...', 16384)
+#1 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#2 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#3 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('index/cgi.php')
+#4 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('index/cgi.php', NULL)
+#5 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#6 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#7 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#8 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('cgiAction')
+#9 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#10 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#11 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#12 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#13 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#14 {main}
+2012-08-17T15:39:22+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-17T15:39:47+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-17T15:40:47+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-17T15:57:21+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-17T15:59:21+02:00 ERR (3): exception 'Zend_Controller_Action_Exception' with message 'Context "rss" does not exist' in /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ContextSwitch.php:532
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ContextSwitch.php(1239): Zend_Controller_Action_Helper_ContextSwitch->hasContext('rss', true)
+#1 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ContextSwitch.php(257): Zend_Controller_Action_Helper_ContextSwitch->hasActionContext('browse', 'rss')
+#2 /www/libis/html/crkc/application/libraries/Omeka/Controller/Action.php(119): Zend_Controller_Action_Helper_ContextSwitch->initContext()
+#3 /www/libis/html/crkc/application/libraries/Omeka/Controller/Action.php(87): Omeka_Controller_Action->setActionContexts()
+#4 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(268): Omeka_Controller_Action->__construct(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http), Array)
+#5 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#8 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#9 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#10 {main}
+2012-08-17T16:13:27+02:00 INFO (6): Failed login attempt from '10.32.32.151'.
+2012-08-17T16:13:41+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-17T16:30:09+02:00 ERR (3): exception 'Omeka_Record_Exception' with message 'Er is geen element met de naam "Organisatie"!' in /www/libis/html/crkc/application/models/ActsAsElementText.php:322
+Stack trace:
+#0 /www/libis/html/crkc/application/models/ActsAsElementText.php(238): ActsAsElementText->getElementByNameAndSetName('Organisatie', 'Item Type Metad...')
+#1 [internal function]: ActsAsElementText->getElementTextsByElementNameAndSetName('Organisatie', 'Item Type Metad...')
+#2 /www/libis/html/crkc/application/libraries/Omeka/Record.php(250): call_user_func_array(Array, Array)
+#3 /www/libis/html/crkc/application/libraries/Omeka/Record.php(209): Omeka_Record->delegateToMixins('getElementTexts...', Array)
+#4 /www/libis/html/crkc/application/libraries/Omeka/View/Helper/RecordMetadata.php(200): Omeka_Record->__call('getElementTexts...', Array)
+#5 /www/libis/html/crkc/application/libraries/Omeka/View/Helper/RecordMetadata.php(200): Item->getElementTextsByElementNameAndSetName('Organisatie', 'Item Type Metad...')
+#6 /www/libis/html/crkc/application/libraries/Omeka/View/Helper/RecordMetadata.php(173): Omeka_View_Helper_RecordMetadata->_getElementText(Object(Item), 'Item Type Metad...', 'Organisatie')
+#7 /www/libis/html/crkc/application/libraries/Omeka/View/Helper/RecordMetadata.php(82): Omeka_View_Helper_RecordMetadata->_getText(Object(Item), 'Item Type Metad...', 'Organisatie')
+#8 /www/libis/html/crkc/application/helpers/ItemMetadata.php(28): Omeka_View_Helper_RecordMetadata->_get(Object(Item), 'Item Type Metad...', 'Organisatie', Array)
+#9 [internal function]: Omeka_View_Helper_ItemMetadata->itemMetadata(Object(Item), 'Item Type Metad...', 'Organisatie', Array)
+#10 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(350): call_user_func_array(Array, Array)
+#11 /www/libis/html/crkc/application/helpers/ItemFunctions.php(198): Zend_View_Abstract->__call('itemMetadata', Array)
+#12 /www/libis/html/crkc/application/helpers/ItemFunctions.php(198): Omeka_View->itemMetadata(Object(Item), 'Item Type Metad...', 'Organisatie', Array)
+#13 /www/libis/html/crkc/themes/CRKC/items/show.php(129): item('Item Type Metad...', 'Organisatie')
+#14 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#15 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#16 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/show.php')
+#17 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/show.php', NULL)
+#18 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#19 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#20 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#21 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#22 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#23 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#24 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#25 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#26 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#27 {main}
+2012-08-17T17:07:04+02:00 ERR (3): exception 'Omeka_Record_Exception' with message 'Er is geen element met de naam "Onderwerp"!' in /www/libis/html/crkc/application/models/ActsAsElementText.php:322
+Stack trace:
+#0 /www/libis/html/crkc/application/models/ActsAsElementText.php(238): ActsAsElementText->getElementByNameAndSetName('Onderwerp', 'Dublin Core')
+#1 [internal function]: ActsAsElementText->getElementTextsByElementNameAndSetName('Onderwerp', 'Dublin Core')
+#2 /www/libis/html/crkc/application/libraries/Omeka/Record.php(250): call_user_func_array(Array, Array)
+#3 /www/libis/html/crkc/application/libraries/Omeka/Record.php(209): Omeka_Record->delegateToMixins('getElementTexts...', Array)
+#4 /www/libis/html/crkc/application/libraries/Omeka/View/Helper/RecordMetadata.php(200): Omeka_Record->__call('getElementTexts...', Array)
+#5 /www/libis/html/crkc/application/libraries/Omeka/View/Helper/RecordMetadata.php(200): Item->getElementTextsByElementNameAndSetName('Onderwerp', 'Dublin Core')
+#6 /www/libis/html/crkc/application/libraries/Omeka/View/Helper/RecordMetadata.php(173): Omeka_View_Helper_RecordMetadata->_getElementText(Object(Item), 'Dublin Core', 'Onderwerp')
+#7 /www/libis/html/crkc/application/libraries/Omeka/View/Helper/RecordMetadata.php(82): Omeka_View_Helper_RecordMetadata->_getText(Object(Item), 'Dublin Core', 'Onderwerp')
+#8 /www/libis/html/crkc/application/helpers/ItemMetadata.php(28): Omeka_View_Helper_RecordMetadata->_get(Object(Item), 'Dublin Core', 'Onderwerp', Array)
+#9 [internal function]: Omeka_View_Helper_ItemMetadata->itemMetadata(Object(Item), 'Dublin Core', 'Onderwerp', Array)
+#10 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(350): call_user_func_array(Array, Array)
+#11 /www/libis/html/crkc/application/helpers/ItemFunctions.php(198): Zend_View_Abstract->__call('itemMetadata', Array)
+#12 /www/libis/html/crkc/application/helpers/ItemFunctions.php(198): Omeka_View->itemMetadata(Object(Item), 'Dublin Core', 'Onderwerp', Array)
+#13 /www/libis/html/crkc/themes/CRKC/items/browse.php(114): item('Dublin Core', 'Onderwerp')
+#14 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#15 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#16 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/browse.ph...')
+#17 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/browse.ph...', NULL)
+#18 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#19 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#20 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#21 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('browseAction')
+#22 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#23 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#24 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#25 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#26 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#27 {main}
+2012-08-17T17:18:25+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-18T07:31:34+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-18T07:51:19+02:00 ERR (3): exception 'Omeka_Record_Exception' with message 'Er is geen element met de naam "Titel"!' in /www/libis/html/crkc/application/models/ActsAsElementText.php:322
+Stack trace:
+#0 /www/libis/html/crkc/application/models/ActsAsElementText.php(238): ActsAsElementText->getElementByNameAndSetName('Titel', 'Dublin Core')
+#1 [internal function]: ActsAsElementText->getElementTextsByElementNameAndSetName('Titel', 'Dublin Core')
+#2 /www/libis/html/crkc/application/libraries/Omeka/Record.php(250): call_user_func_array(Array, Array)
+#3 /www/libis/html/crkc/application/libraries/Omeka/Record.php(209): Omeka_Record->delegateToMixins('getElementTexts...', Array)
+#4 /www/libis/html/crkc/application/libraries/Omeka/View/Helper/RecordMetadata.php(200): Omeka_Record->__call('getElementTexts...', Array)
+#5 /www/libis/html/crkc/application/libraries/Omeka/View/Helper/RecordMetadata.php(200): Item->getElementTextsByElementNameAndSetName('Titel', 'Dublin Core')
+#6 /www/libis/html/crkc/application/libraries/Omeka/View/Helper/RecordMetadata.php(173): Omeka_View_Helper_RecordMetadata->_getElementText(Object(Item), 'Dublin Core', 'Titel')
+#7 /www/libis/html/crkc/application/libraries/Omeka/View/Helper/RecordMetadata.php(82): Omeka_View_Helper_RecordMetadata->_getText(Object(Item), 'Dublin Core', 'Titel')
+#8 /www/libis/html/crkc/application/helpers/ItemMetadata.php(28): Omeka_View_Helper_RecordMetadata->_get(Object(Item), 'Dublin Core', 'Titel', Array)
+#9 [internal function]: Omeka_View_Helper_ItemMetadata->itemMetadata(Object(Item), 'Dublin Core', 'Titel', Array)
+#10 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(350): call_user_func_array(Array, Array)
+#11 /www/libis/html/crkc/application/helpers/ItemFunctions.php(198): Zend_View_Abstract->__call('itemMetadata', Array)
+#12 /www/libis/html/crkc/application/helpers/ItemFunctions.php(198): Omeka_View->itemMetadata(Object(Item), 'Dublin Core', 'Titel', Array)
+#13 /www/libis/html/crkc/themes/CRKC/items/browse.php(122): item('Dublin Core', 'Titel')
+#14 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#15 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#16 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/browse.ph...')
+#17 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/browse.ph...', NULL)
+#18 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#19 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#20 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#21 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('browseAction')
+#22 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#23 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#24 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#25 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#26 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#27 {main}
+2012-08-18T10:34:22+02:00 INFO (6): Failed login attempt from '10.107.0.4'.
+2012-08-18T10:34:38+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-18T11:34:44+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-18T11:39:20+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-19T13:57:02+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-19T13:57:06+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-19T13:57:12+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-19T13:57:39+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-20T09:23:54+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-20T09:24:00+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-20T09:24:44+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-20T09:53:24+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-20T10:52:22+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-20T11:05:02+02:00 ERR (3): exception 'Exception' with message 'Er is geen item ingesteld om op deze themapagina te worden getoond! Zie de Omeka-documentatie voor details.' in /www/libis/html/crkc/application/helpers/ItemFunctions.php:73
+Stack trace:
+#0 /www/libis/html/crkc/plugins/ExhibitBuilder/helpers/ExhibitFunctions.php(473): get_current_item()
+#1 /www/libis/html/crkc/plugins/ExhibitBuilder/views/shared/exhibit_layouts/image-list-left/layout.php(18): exhibit_builder_exhibit_display_item(Array, Array)
+#2 /www/libis/html/crkc/plugins/ExhibitBuilder/helpers/ExhibitFunctions.php(389): include('/www/libis/html...')
+#3 /www/libis/html/crkc/themes/CRKC/exhibit-builder/exhibits/show.php(17): exhibit_builder_render_exhibit_page()
+#4 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#5 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#6 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('exhibits/show.p...')
+#7 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('exhibits/show.p...', NULL)
+#8 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(212): Zend_Controller_Action_Helper_ViewRenderer->render('show', NULL, false)
+#9 /www/libis/html/crkc/plugins/ExhibitBuilder/controllers/ExhibitsController.php(177): Zend_Controller_Action->render('show')
+#10 /www/libis/html/crkc/plugins/ExhibitBuilder/controllers/ExhibitsController.php(146): ExhibitBuilder_ExhibitsController->renderExhibit(Array)
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): ExhibitBuilder_ExhibitsController->showAction()
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#14 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#15 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#16 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#17 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#18 {main}
+2012-08-20T13:30:57+02:00 ERR (3): exception 'Zend_Controller_Router_Exception' with message 'slug is not specified' in /www/libis/html/crkc/application/libraries/Zend/Controller/Router/Route.php:354
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Zend/Controller/Router/Rewrite.php(470): Zend_Controller_Router_Route->assemble(Array, false, true)
+#1 /www/libis/html/crkc/application/libraries/Zend/View/Helper/Url.php(49): Zend_Controller_Router_Rewrite->assemble(Array, 'exhibitSimple', false, true)
+#2 /www/libis/html/crkc/application/helpers/Url.php(79): Zend_View_Helper_Url->url(Array, 'exhibitSimple', false, true)
+#3 /www/libis/html/crkc/application/helpers/UrlFunctions.php(53): Omeka_View_Helper_Url->url(Array, 'exhibitSimple', Array, false, true)
+#4 [internal function]: uri(Array, 'exhibitSimple')
+#5 /www/libis/html/crkc/application/helpers/UrlFunctions.php(186): call_user_func_array('uri', Array)
+#6 /www/libis/html/crkc/plugins/ExhibitBuilder/helpers/ExhibitFunctions.php(75): public_uri(Array, 'exhibitSimple')
+#7 /www/libis/html/crkc/plugins/ExhibitBuilder/helpers/ExhibitFunctions.php(50): exhibit_builder_exhibit_uri(NULL, NULL, NULL)
+#8 /www/libis/html/crkc/plugins/ExhibitBuilder/helpers/ExhibitFunctions.php(720): exhibit_builder_link_to_exhibit(NULL, Object(Exhibit), Array, NULL, NULL)
+#9 /www/libis/html/crkc/themes/CRKC/custom.php(787): link_to_exhibit(Object(Exhibit))
+#10 /www/libis/html/crkc/themes/CRKC/items/show.php(55): Libis_link_to_related_exhibits(84051)
+#11 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#12 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/show.php')
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/show.php', NULL)
+#15 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#16 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#17 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#18 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#19 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#20 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#21 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#22 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#23 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#24 {main}
+2012-08-20T14:18:06+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-20T14:23:54+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-20T14:39:29+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-20T14:46:01+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-20T16:09:16+02:00 INFO (6): Failed login attempt from '10.32.32.151'.
+2012-08-20T16:09:31+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-21T12:10:39+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-21T12:34:54+02:00 INFO (6): Failed login attempt from '91.183.124.146'.
+2012-08-21T12:35:11+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-21T13:36:34+02:00 INFO (6): Failed login attempt from '91.183.124.146'.
+2012-08-21T13:36:51+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-22T11:10:00+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-22T14:59:10+02:00 INFO (6): Failed login attempt from '10.32.32.151'.
+2012-08-22T14:59:27+02:00 DEBUG (7): Error in retrieving latest Omeka version: Unable to Connect to tcp://api.omeka.org:80. Error #110: Connection timed out
+2012-08-22T15:53:28+02:00 ERR (3): exception 'Exception' with message 'Er is geen item ingesteld om op deze themapagina te worden getoond! Zie de Omeka-documentatie voor details.' in /www/libis/html/crkc/application/helpers/ItemFunctions.php:73
+Stack trace:
+#0 /www/libis/html/crkc/application/helpers/LinkFunctions.php(187): get_current_item()
+#1 /www/libis/html/crkc/plugins/Digitool/plugin.php(412): link_to_item(Object(Item))
+#2 /www/libis/html/crkc/themes/CRKC/custom.php(618): digitool_simple_gallery_array(Array)
+#3 /www/libis/html/crkc/themes/CRKC/simple-pages/page/show.php(28): Libis_loep_query('Wijwatersprenke...')
+#4 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#5 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#6 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('page/show.php')
+#7 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('page/show.php', NULL)
+#8 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#9 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#10 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#14 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#15 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#16 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#17 {main}
+2012-08-22T15:54:50+02:00 ERR (3): exception 'Exception' with message 'Er is geen item ingesteld om op deze themapagina te worden getoond! Zie de Omeka-documentatie voor details.' in /www/libis/html/crkc/application/helpers/ItemFunctions.php:73
+Stack trace:
+#0 /www/libis/html/crkc/application/helpers/LinkFunctions.php(187): get_current_item()
+#1 /www/libis/html/crkc/plugins/Digitool/plugin.php(408): link_to_item(Object(Item))
+#2 /www/libis/html/crkc/themes/CRKC/custom.php(618): digitool_simple_gallery_array(Array)
+#3 /www/libis/html/crkc/themes/CRKC/simple-pages/page/show.php(28): Libis_loep_query('Wijwatersprenke...')
+#4 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#5 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#6 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('page/show.php')
+#7 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('page/show.php', NULL)
+#8 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#9 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#10 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#14 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#15 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#16 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#17 {main}
+2012-08-23T10:02:44+02:00 ERR (3): exception 'Exception' with message 'Kon het bestand images/LogoOostVl.jpg niet vinden!' in /www/libis/html/crkc/application/helpers/AssetFunctions.php:289
+Stack trace:
+#0 /www/libis/html/crkc/application/helpers/AssetFunctions.php(249): web_path_to('images/LogoOost...')
+#1 /www/libis/html/crkc/application/helpers/AssetFunctions.php(189): src('LogoOostVl.jpg', 'images')
+#2 /www/libis/html/crkc/themes/CRKC/common/footer.php(11): img('LogoOostVl.jpg')
+#3 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#4 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#5 /www/libis/html/crkc/application/libraries/Zend/View/Helper/Partial.php(105): Zend_View_Abstract->render('common/footer.p...')
+#6 [internal function]: Zend_View_Helper_Partial->partial('common/footer.p...', Array)
+#7 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(350): call_user_func_array(Array, Array)
+#8 /www/libis/html/crkc/application/helpers/Functions.php(68): Zend_View_Abstract->__call('partial', Array)
+#9 /www/libis/html/crkc/application/helpers/Functions.php(68): Omeka_View->partial('common/footer.p...', Array)
+#10 /www/libis/html/crkc/application/helpers/Functions.php(92): common('footer', Array)
+#11 /www/libis/html/crkc/themes/CRKC/items/show.php(156): foot()
+#12 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#13 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/show.php')
+#15 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/show.php', NULL)
+#16 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#17 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#18 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#19 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#20 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#21 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#22 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#23 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#24 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#25 {main}
+2012-08-23T11:04:28+02:00 ERR (3): exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /www/libis/html/crkc/application/libraries/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Statement->execute(Array)
+#2 [internal function]: Zend_Db_Adapter_Abstract->query('???SELECT sp.ti...')
+#3 /www/libis/html/crkc/application/libraries/Omeka/Db.php(83): call_user_func_array(Array, Array)
+#4 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->__call('query', Array)
+#5 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->query('???SELECT sp.ti...')
+#6 /www/libis/html/crkc/themes/CRKC/items/show.php(55): Libis_link_to_related_exhibits(98165)
+#7 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#8 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#9 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/show.php')
+#10 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/show.php', NULL)
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#15 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#16 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#17 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#18 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#19 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#20 {main}
+2012-08-23T11:06:24+02:00 ERR (3): exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /www/libis/html/crkc/application/libraries/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Statement->execute(Array)
+#2 [internal function]: Zend_Db_Adapter_Abstract->query('???SELECT e.*,s...')
+#3 /www/libis/html/crkc/application/libraries/Omeka/Db.php(83): call_user_func_array(Array, Array)
+#4 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->__call('query', Array)
+#5 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->query('???SELECT e.*,s...')
+#6 /www/libis/html/crkc/themes/CRKC/items/show.php(55): Libis_link_to_related_exhibits(98165)
+#7 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#8 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#9 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/show.php')
+#10 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/show.php', NULL)
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#15 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#16 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#17 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#18 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#19 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#20 {main}
+2012-08-23T11:12:21+02:00 ERR (3): exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5' in /www/libis/html/crkc/application/libraries/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('???SELECT e.*,s...')
+#1 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), '???SELECT e.*,s...')
+#2 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Abstract.php(478): Zend_Db_Adapter_Mysqli->prepare('???SELECT e.*,s...')
+#3 [internal function]: Zend_Db_Adapter_Abstract->query('???SELECT e.*,s...')
+#4 /www/libis/html/crkc/application/libraries/Omeka/Db.php(83): call_user_func_array(Array, Array)
+#5 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->__call('query', Array)
+#6 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->query('???SELECT e.*,s...')
+#7 /www/libis/html/crkc/themes/CRKC/items/show.php(55): Libis_link_to_related_exhibits(98165)
+#8 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#9 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#10 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/show.php')
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/show.php', NULL)
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#15 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#16 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#17 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#18 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#19 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#20 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#21 {main}
+2012-08-23T11:13:25+02:00 ERR (3): exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5' in /www/libis/html/crkc/application/libraries/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('???SELECT e.*,s...')
+#1 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), '???SELECT e.*,s...')
+#2 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Abstract.php(478): Zend_Db_Adapter_Mysqli->prepare('???SELECT e.*,s...')
+#3 [internal function]: Zend_Db_Adapter_Abstract->query('???SELECT e.*,s...')
+#4 /www/libis/html/crkc/application/libraries/Omeka/Db.php(83): call_user_func_array(Array, Array)
+#5 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->__call('query', Array)
+#6 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->query('???SELECT e.*,s...')
+#7 /www/libis/html/crkc/themes/CRKC/items/show.php(55): Libis_link_to_related_exhibits(98165)
+#8 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#9 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#10 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/show.php')
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/show.php', NULL)
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#15 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#16 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#17 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#18 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#19 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#20 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#21 {main}
+2012-08-23T11:20:38+02:00 ERR (3): exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5' in /www/libis/html/crkc/application/libraries/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('???SELECT e.*,s...')
+#1 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), '???SELECT e.*,s...')
+#2 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Abstract.php(478): Zend_Db_Adapter_Mysqli->prepare('???SELECT e.*,s...')
+#3 [internal function]: Zend_Db_Adapter_Abstract->query('???SELECT e.*,s...')
+#4 /www/libis/html/crkc/application/libraries/Omeka/Db.php(83): call_user_func_array(Array, Array)
+#5 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->__call('query', Array)
+#6 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->query('???SELECT e.*,s...')
+#7 /www/libis/html/crkc/themes/CRKC/items/show.php(55): Libis_link_to_related_exhibits(98165)
+#8 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#9 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#10 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/show.php')
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/show.php', NULL)
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#15 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#16 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#17 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#18 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#19 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#20 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#21 {main}
+2012-08-23T11:21:13+02:00 ERR (3): exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5' in /www/libis/html/crkc/application/libraries/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('???SELECT e.*,s...')
+#1 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), '???SELECT e.*,s...')
+#2 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Abstract.php(478): Zend_Db_Adapter_Mysqli->prepare('???SELECT e.*,s...')
+#3 [internal function]: Zend_Db_Adapter_Abstract->query('???SELECT e.*,s...')
+#4 /www/libis/html/crkc/application/libraries/Omeka/Db.php(83): call_user_func_array(Array, Array)
+#5 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->__call('query', Array)
+#6 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->query('???SELECT e.*,s...')
+#7 /www/libis/html/crkc/themes/CRKC/items/show.php(55): Libis_link_to_related_exhibits(98165)
+#8 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#9 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#10 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/show.php')
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/show.php', NULL)
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#15 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#16 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#17 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#18 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#19 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#20 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#21 {main}
+2012-08-23T11:21:15+02:00 ERR (3): exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5' in /www/libis/html/crkc/application/libraries/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('???SELECT e.*,s...')
+#1 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), '???SELECT e.*,s...')
+#2 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Abstract.php(478): Zend_Db_Adapter_Mysqli->prepare('???SELECT e.*,s...')
+#3 [internal function]: Zend_Db_Adapter_Abstract->query('???SELECT e.*,s...')
+#4 /www/libis/html/crkc/application/libraries/Omeka/Db.php(83): call_user_func_array(Array, Array)
+#5 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->__call('query', Array)
+#6 /www/libis/html/crkc/themes/CRKC/custom.php(786): Omeka_Db->query('???SELECT e.*,s...')
+#7 /www/libis/html/crkc/themes/CRKC/items/show.php(55): Libis_link_to_related_exhibits(98165)
+#8 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#9 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#10 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/show.php')
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/show.php', NULL)
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#15 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#16 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#17 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#18 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#19 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#20 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#21 {main}
+2012-08-23T11:21:37+02:00 ERR (3): exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5' in /www/libis/html/crkc/application/libraries/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT e.*,sp.t...')
+#1 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT e.*,sp.t...')
+#2 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Abstract.php(478): Zend_Db_Adapter_Mysqli->prepare('SELECT e.*,sp.t...')
+#3 [internal function]: Zend_Db_Adapter_Abstract->query('SELECT e.*,sp.t...')
+#4 /www/libis/html/crkc/application/libraries/Omeka/Db.php(83): call_user_func_array(Array, Array)
+#5 /www/libis/html/crkc/themes/CRKC/custom.php(785): Omeka_Db->__call('query', Array)
+#6 /www/libis/html/crkc/themes/CRKC/custom.php(785): Omeka_Db->query('SELECT e.*,sp.t...')
+#7 /www/libis/html/crkc/themes/CRKC/items/show.php(55): Libis_link_to_related_exhibits(98165)
+#8 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#9 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#10 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/show.php')
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/show.php', NULL)
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#15 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#16 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#17 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#18 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#19 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#20 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#21 {main}
+2012-08-23T11:22:17+02:00 ERR (3): exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5' in /www/libis/html/crkc/application/libraries/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT e.*,sp.t...')
+#1 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT e.*,sp.t...')
+#2 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Abstract.php(478): Zend_Db_Adapter_Mysqli->prepare('SELECT e.*,sp.t...')
+#3 [internal function]: Zend_Db_Adapter_Abstract->query('SELECT e.*,sp.t...')
+#4 /www/libis/html/crkc/application/libraries/Omeka/Db.php(83): call_user_func_array(Array, Array)
+#5 /www/libis/html/crkc/themes/CRKC/custom.php(787): Omeka_Db->__call('query', Array)
+#6 /www/libis/html/crkc/themes/CRKC/custom.php(787): Omeka_Db->query('SELECT e.*,sp.t...')
+#7 /www/libis/html/crkc/themes/CRKC/items/show.php(55): Libis_link_to_related_exhibits(98165)
+#8 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#9 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#10 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/show.php')
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/show.php', NULL)
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#15 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#16 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#17 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#18 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#19 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#20 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#21 {main}
+2012-08-23T11:23:17+02:00 ERR (3): exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5' in /www/libis/html/crkc/application/libraries/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT e.*,sp.t...')
+#1 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT e.*,sp.t...')
+#2 /www/libis/html/crkc/application/libraries/Zend/Db/Adapter/Abstract.php(478): Zend_Db_Adapter_Mysqli->prepare('SELECT e.*,sp.t...')
+#3 [internal function]: Zend_Db_Adapter_Abstract->query('SELECT e.*,sp.t...')
+#4 /www/libis/html/crkc/application/libraries/Omeka/Db.php(83): call_user_func_array(Array, Array)
+#5 /www/libis/html/crkc/themes/CRKC/custom.php(787): Omeka_Db->__call('query', Array)
+#6 /www/libis/html/crkc/themes/CRKC/custom.php(787): Omeka_Db->query('SELECT e.*,sp.t...')
+#7 /www/libis/html/crkc/themes/CRKC/items/show.php(55): Libis_link_to_related_exhibits(98165)
+#8 /www/libis/html/crkc/application/libraries/Omeka/View.php(113): include('/www/libis/html...')
+#9 /www/libis/html/crkc/application/libraries/Zend/View/Abstract.php(888): Omeka_View->_run('/www/libis/html...')
+#10 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Abstract->render('items/show.php')
+#11 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('items/show.php', NULL)
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#15 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('showAction')
+#16 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#17 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#18 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#19 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#20 /www/libis/html/crkc/index.php(28): Omeka_Core->run()
+#21 {main}
+2012-08-29T15:34:01+02:00 INFO (6): Failed login attempt from '91.182.138.143'.
+2012-08-31T11:37:33+02:00 INFO (6): Failed login attempt from '91.182.138.143'.
+2012-08-31T06:13:53-04:00 WARN (4): Omeka_Storage_Adapter_Filesystem: Tried to delete missing file 'files/40b8af176562b083461c745ab5a62e37.jpg'.
+2012-08-31T06:13:53-04:00 ERR (3): exception 'Omeka_File_Derivative_Exception' with message 'Something went wrong with image creation.  Please notify an administrator.' in /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php:189
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(113): Omeka_File_Derivative_Image::createImage('/www/libis/vol0...', '800', 'fullsize')
+#1 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(222): Omeka_File_Derivative_Image::createDerivativeImages('/www/libis/vol0...')
+#2 /www/libis/html/crkc/application/models/File.php(248): Omeka_File_Derivative_Image::createAll('/www/libis/vol0...', 'image/jpeg')
+#3 /www/libis/html/crkc/application/models/File/ProcessUploadJob.php(24): File->createDerivatives()
+#4 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Adapter/Synchronous.php(25): File_ProcessUploadJob->perform()
+#5 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Default.php(95): Omeka_Job_Dispatcher_Adapter_Synchronous->send('{"className":"F...', Array)
+#6 /www/libis/html/crkc/application/models/File.php(70): Omeka_Job_Dispatcher_Default->send('File_ProcessUpl...', Array)
+#7 [internal function]: File->afterInsert()
+#8 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#9 /www/libis/html/crkc/application/libraries/Omeka/Record.php(561): Omeka_Record->runCallbacks('afterInsert')
+#10 /www/libis/html/crkc/application/libraries/Omeka/Record.php(581): Omeka_Record->save()
+#11 /www/libis/html/crkc/application/models/Item.php(303): Omeka_Record->forceSave()
+#12 /www/libis/html/crkc/application/models/ItemBuilder.php(213): Item->saveFiles()
+#13 /www/libis/html/crkc/application/libraries/globals.php(505): ItemBuilder->addFiles('Upload', 'file', Array)
+#14 /www/libis/html/crkc/application/models/Item.php(286): insert_files_for_item(Object(Item), 'Upload', 'file', Array)
+#15 /www/libis/html/crkc/application/models/Item.php(153): Item->_uploadFiles()
+#16 [internal function]: Item->beforeSaveForm(Object(ArrayObject))
+#17 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#18 /www/libis/html/crkc/application/libraries/Omeka/Record.php(803): Omeka_Record->runCallbacks('beforeSaveForm', Object(ArrayObject))
+#19 /www/libis/html/crkc/application/libraries/Omeka/Controller/Action.php(482): Omeka_Record->saveForm(Array)
+#20 /www/libis/html/crkc/application/controllers/ItemsController.php(99): Omeka_Controller_Action->editAction()
+#21 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): ItemsController->editAction()
+#22 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('editAction')
+#23 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#24 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#25 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#26 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#27 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#28 {main}
+2012-08-31T14:29:27+02:00 ERR (3): exception 'BadMethodCallException' with message 'Method named 'findActiveCategories' does not exist or is not callable.' in /www/libis/html/crkc/application/libraries/Omeka/Db/Table.php:84
+Stack trace:
+#0 /www/libis/html/crkc/plugins/XMLSitemap/plugin.php(403): Omeka_Db_Table->__call('findActiveCateg...', Array)
+#1 /www/libis/html/crkc/plugins/XMLSitemap/plugin.php(403): Omeka_Db_Table->findActiveCategories()
+#2 /www/libis/html/crkc/plugins/XMLSitemap/plugin.php(192): xml_sitemap_build_sitemap()
+#3 [internal function]: xml_sitemap_config(Array)
+#4 /www/libis/html/crkc/application/libraries/Omeka/Plugin/Broker.php(147): call_user_func_array('xml_sitemap_con...', Array)
+#5 /www/libis/html/crkc/application/controllers/PluginsController.php(54): Omeka_Plugin_Broker->callHook('config', Array, Object(Plugin))
+#6 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): PluginsController->configAction()
+#7 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('configAction')
+#8 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#9 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#10 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#11 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#12 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#13 {main}
+2012-09-05T03:46:59-04:00 WARN (4): Omeka_Storage_Adapter_Filesystem: Tried to delete missing file 'files/13a163671130542b2f180c4a9b7b7588.JPG'.
+2012-09-06T13:52:14+02:00 INFO (6): Failed login attempt from '[2001:6a8:2900:5001:cc0f:1ee4:d5ae:b3eb]'.
+2012-09-17T11:45:06+02:00 INFO (6): Failed login attempt from '91.183.124.146'.
+2012-09-26T15:17:57+02:00 INFO (6): Failed login attempt from '[2001:6a8:2900:5001:5194:e377:b24f:1609]'.
+2012-10-09T10:13:49-04:00 WARN (4): Omeka_Storage_Adapter_Filesystem: Tried to delete missing file 'files/1a7c48e8933dcd2b8f3d80c845a914de.jpg'.
+2012-10-09T10:13:49-04:00 ERR (3): exception 'Omeka_File_Derivative_Exception' with message 'ImageMagick is not properly configured: invalid directory given for the ImageMagick command!' in /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php:81
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(150): Omeka_File_Derivative_Image::_getPathToImageMagick()
+#1 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(114): Omeka_File_Derivative_Image::createImage('/www/libis/vol0...', '800', 'fullsize')
+#2 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(223): Omeka_File_Derivative_Image::createDerivativeImages('/www/libis/vol0...')
+#3 /www/libis/html/crkc/application/models/File.php(248): Omeka_File_Derivative_Image::createAll('/www/libis/vol0...', 'image/jpeg')
+#4 /www/libis/html/crkc/application/models/File/ProcessUploadJob.php(24): File->createDerivatives()
+#5 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Adapter/Synchronous.php(25): File_ProcessUploadJob->perform()
+#6 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Default.php(95): Omeka_Job_Dispatcher_Adapter_Synchronous->send('{"className":"F...', Array)
+#7 /www/libis/html/crkc/application/models/File.php(70): Omeka_Job_Dispatcher_Default->send('File_ProcessUpl...', Array)
+#8 [internal function]: File->afterInsert()
+#9 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#10 /www/libis/html/crkc/application/libraries/Omeka/Record.php(561): Omeka_Record->runCallbacks('afterInsert')
+#11 /www/libis/html/crkc/application/libraries/Omeka/Record.php(581): Omeka_Record->save()
+#12 /www/libis/html/crkc/application/models/Item.php(303): Omeka_Record->forceSave()
+#13 /www/libis/html/crkc/application/models/ItemBuilder.php(213): Item->saveFiles()
+#14 /www/libis/html/crkc/application/libraries/globals.php(505): ItemBuilder->addFiles('Upload', 'file', Array)
+#15 /www/libis/html/crkc/application/models/Item.php(286): insert_files_for_item(Object(Item), 'Upload', 'file', Array)
+#16 /www/libis/html/crkc/application/models/Item.php(153): Item->_uploadFiles()
+#17 [internal function]: Item->beforeSaveForm(Object(ArrayObject))
+#18 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#19 /www/libis/html/crkc/application/libraries/Omeka/Record.php(803): Omeka_Record->runCallbacks('beforeSaveForm', Object(ArrayObject))
+#20 /www/libis/html/crkc/application/libraries/Omeka/Controller/Action.php(482): Omeka_Record->saveForm(Array)
+#21 /www/libis/html/crkc/application/controllers/ItemsController.php(99): Omeka_Controller_Action->editAction()
+#22 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): ItemsController->editAction()
+#23 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('editAction')
+#24 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#25 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#26 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#27 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#28 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#29 {main}
+2012-10-09T16:16:44+02:00 ERR (3): exception 'Zend_File_Transfer_Exception' with message 'The given destination is not writeable' in /www/libis/html/crkc/application/libraries/Zend/File/Transfer/Adapter/Abstract.php:1040
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Omeka/File/Ingest/Upload.php(40): Zend_File_Transfer_Adapter_Abstract->setDestination('/www/libis/html...')
+#1 /www/libis/html/crkc/application/libraries/Omeka/File/Ingest/Upload.php(139): Omeka_File_Ingest_Upload->_buildAdapter()
+#2 /www/libis/html/crkc/application/models/ItemBuilder.php(246): Omeka_File_Ingest_Upload->addValidator(Object(Omeka_Validate_File_Extension))
+#3 /www/libis/html/crkc/application/models/ItemBuilder.php(207): ItemBuilder->_addIngestValidators(Object(Omeka_File_Ingest_Upload))
+#4 /www/libis/html/crkc/application/libraries/globals.php(505): ItemBuilder->addFiles('Upload', 'file', Array)
+#5 /www/libis/html/crkc/application/models/Item.php(286): insert_files_for_item(Object(Item), 'Upload', 'file', Array)
+#6 /www/libis/html/crkc/application/models/Item.php(153): Item->_uploadFiles()
+#7 [internal function]: Item->beforeSaveForm(Object(ArrayObject))
+#8 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#9 /www/libis/html/crkc/application/libraries/Omeka/Record.php(803): Omeka_Record->runCallbacks('beforeSaveForm', Object(ArrayObject))
+#10 /www/libis/html/crkc/application/libraries/Omeka/Controller/Action.php(482): Omeka_Record->saveForm(Array)
+#11 /www/libis/html/crkc/application/controllers/ItemsController.php(99): Omeka_Controller_Action->editAction()
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): ItemsController->editAction()
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('editAction')
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#15 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#16 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#17 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#18 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#19 {main}
+2012-10-09T17:58:37+02:00 WARN (4): Omeka_Storage_Adapter_Filesystem: Tried to delete missing file 'files/ca2fa7877c66de1c9d5481ec1c006e10.JPG'.
+2012-10-09T12:02:02-04:00 ERR (3): exception 'Omeka_File_Derivative_Exception' with message 'ImageMagick is not properly configured: invalid directory given for the ImageMagick command!' in /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php:81
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(150): Omeka_File_Derivative_Image::_getPathToImageMagick()
+#1 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(114): Omeka_File_Derivative_Image::createImage('/www/libis/html...', '800', 'fullsize')
+#2 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(223): Omeka_File_Derivative_Image::createDerivativeImages('/www/libis/html...')
+#3 /www/libis/html/crkc/application/models/File.php(248): Omeka_File_Derivative_Image::createAll('/www/libis/html...', 'image/jpeg')
+#4 /www/libis/html/crkc/application/models/File/ProcessUploadJob.php(24): File->createDerivatives()
+#5 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Adapter/Synchronous.php(25): File_ProcessUploadJob->perform()
+#6 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Default.php(95): Omeka_Job_Dispatcher_Adapter_Synchronous->send('{"className":"F...', Array)
+#7 /www/libis/html/crkc/application/models/File.php(70): Omeka_Job_Dispatcher_Default->send('File_ProcessUpl...', Array)
+#8 [internal function]: File->afterInsert()
+#9 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#10 /www/libis/html/crkc/application/libraries/Omeka/Record.php(561): Omeka_Record->runCallbacks('afterInsert')
+#11 /www/libis/html/crkc/application/libraries/Omeka/Record.php(581): Omeka_Record->save()
+#12 /www/libis/html/crkc/application/models/Item.php(303): Omeka_Record->forceSave()
+#13 /www/libis/html/crkc/application/models/ItemBuilder.php(213): Item->saveFiles()
+#14 /www/libis/html/crkc/application/libraries/globals.php(505): ItemBuilder->addFiles('Upload', 'file', Array)
+#15 /www/libis/html/crkc/application/models/Item.php(286): insert_files_for_item(Object(Item), 'Upload', 'file', Array)
+#16 /www/libis/html/crkc/application/models/Item.php(153): Item->_uploadFiles()
+#17 [internal function]: Item->beforeSaveForm(Object(ArrayObject))
+#18 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#19 /www/libis/html/crkc/application/libraries/Omeka/Record.php(803): Omeka_Record->runCallbacks('beforeSaveForm', Object(ArrayObject))
+#20 /www/libis/html/crkc/application/libraries/Omeka/Controller/Action.php(482): Omeka_Record->saveForm(Array)
+#21 /www/libis/html/crkc/application/controllers/ItemsController.php(99): Omeka_Controller_Action->editAction()
+#22 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): ItemsController->editAction()
+#23 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('editAction')
+#24 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#25 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#26 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#27 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#28 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#29 {main}
+2012-10-09T12:55:11-04:00 ERR (3): exception 'Omeka_File_Derivative_Exception' with message 'ImageMagick is not properly configured: invalid directory given for the ImageMagick command!' in /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php:81
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(150): Omeka_File_Derivative_Image::_getPathToImageMagick()
+#1 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(114): Omeka_File_Derivative_Image::createImage('/www/libis/html...', '800', 'fullsize')
+#2 /www/libis/html/crkc/application/libraries/Omeka/File/Derivative/Image.php(223): Omeka_File_Derivative_Image::createDerivativeImages('/www/libis/html...')
+#3 /www/libis/html/crkc/application/models/File.php(248): Omeka_File_Derivative_Image::createAll('/www/libis/html...', 'image/gif')
+#4 /www/libis/html/crkc/application/models/File/ProcessUploadJob.php(24): File->createDerivatives()
+#5 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Adapter/Synchronous.php(25): File_ProcessUploadJob->perform()
+#6 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Default.php(95): Omeka_Job_Dispatcher_Adapter_Synchronous->send('{"className":"F...', Array)
+#7 /www/libis/html/crkc/application/models/File.php(70): Omeka_Job_Dispatcher_Default->send('File_ProcessUpl...', Array)
+#8 [internal function]: File->afterInsert()
+#9 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#10 /www/libis/html/crkc/application/libraries/Omeka/Record.php(561): Omeka_Record->runCallbacks('afterInsert')
+#11 /www/libis/html/crkc/application/libraries/Omeka/Record.php(581): Omeka_Record->save()
+#12 /www/libis/html/crkc/application/models/Item.php(303): Omeka_Record->forceSave()
+#13 /www/libis/html/crkc/application/models/ItemBuilder.php(213): Item->saveFiles()
+#14 /www/libis/html/crkc/application/libraries/globals.php(505): ItemBuilder->addFiles('Upload', 'file', Array)
+#15 /www/libis/html/crkc/application/models/Item.php(286): insert_files_for_item(Object(Item), 'Upload', 'file', Array)
+#16 /www/libis/html/crkc/application/models/Item.php(153): Item->_uploadFiles()
+#17 [internal function]: Item->beforeSaveForm(Object(ArrayObject))
+#18 /www/libis/html/crkc/application/libraries/Omeka/Record.php(282): call_user_func_array(Array, Array)
+#19 /www/libis/html/crkc/application/libraries/Omeka/Record.php(803): Omeka_Record->runCallbacks('beforeSaveForm', Object(ArrayObject))
+#20 /www/libis/html/crkc/application/libraries/Omeka/Controller/Action.php(482): Omeka_Record->saveForm(Array)
+#21 /www/libis/html/crkc/application/controllers/ItemsController.php(99): Omeka_Controller_Action->editAction()
+#22 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): ItemsController->editAction()
+#23 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('editAction')
+#24 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#25 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#26 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#27 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#28 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#29 {main}
+2012-10-11T11:11:28+02:00 INFO (6): Failed login attempt from '[2001:6a8:2900:5001:e937:39d5:1284:77bf]'.
+2012-10-11T11:11:40+02:00 INFO (6): Failed login attempt from '[2001:6a8:2900:5001:e937:39d5:1284:77bf]'.
+2012-10-13T15:16:21+02:00 INFO (6): Failed login attempt from '81.82.37.101'.
+2012-10-13T15:16:25+02:00 INFO (6): Failed login attempt from '81.82.37.101'.
+2012-10-13T15:18:08+02:00 DEBUG (7): [CsvImport] Started import at: 13-okt.-2012 15:18:08
+2012-10-13T15:18:08+02:00 DEBUG (7): [CsvImport] Item import loop started at: 13-okt.-2012 15:18:08
+2012-10-13T15:18:08+02:00 DEBUG (7): [CsvImport] Memory usage: 11327808
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/10_1.jpg': /www/libis/html/crkc/album-001/10_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/100_1.jpg': /www/libis/html/crkc/album-001/100_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/101_1.jpg': /www/libis/html/crkc/album-001/101_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/102_1.2.jpg': /www/libis/html/crkc/album-001/102_1.2.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/103_1.jpg': /www/libis/html/crkc/album-001/103_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/104_1.jpg': /www/libis/html/crkc/album-001/104_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/105_1.jpg': /www/libis/html/crkc/album-001/105_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/106_1.jpg': /www/libis/html/crkc/album-001/106_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/107_1.jpg': /www/libis/html/crkc/album-001/107_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/108_1.jpg': /www/libis/html/crkc/album-001/108_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/109_1.jpg': /www/libis/html/crkc/album-001/109_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/11_1.jpg': /www/libis/html/crkc/album-001/11_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/110_1.jpg': /www/libis/html/crkc/album-001/110_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/111_1.jpg': /www/libis/html/crkc/album-001/111_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/112_1.jpg': /www/libis/html/crkc/album-001/112_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/113_1.jpg': /www/libis/html/crkc/album-001/113_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/114_1.jpg': /www/libis/html/crkc/album-001/114_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/115_1.jpg': /www/libis/html/crkc/album-001/115_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/115_2.2.jpg': /www/libis/html/crkc/album-001/115_2.2.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/115_2.jpg': /www/libis/html/crkc/album-001/115_2.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/12_1.jpg': /www/libis/html/crkc/album-001/12_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/13_1.jpg': /www/libis/html/crkc/album-001/13_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/14_1.jpg': /www/libis/html/crkc/album-001/14_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/15_1.jpg': /www/libis/html/crkc/album-001/15_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/16_1.jpg': /www/libis/html/crkc/album-001/16_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/18_1.jpg': /www/libis/html/crkc/album-001/18_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/19_1.jpg': /www/libis/html/crkc/album-001/19_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/2_1.jpg': /www/libis/html/crkc/album-001/2_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/2_2.jpg': /www/libis/html/crkc/album-001/2_2.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/20_1.jpg': /www/libis/html/crkc/album-001/20_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/22_1.jpg': /www/libis/html/crkc/album-001/22_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/23_1.jpg': /www/libis/html/crkc/album-001/23_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/25_1.jpg': /www/libis/html/crkc/album-001/25_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/26_1.jpg': /www/libis/html/crkc/album-001/26_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/27_1.jpg': /www/libis/html/crkc/album-001/27_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/28_1.jpg': /www/libis/html/crkc/album-001/28_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/29_1.jpg': /www/libis/html/crkc/album-001/29_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/3_1.jpg': /www/libis/html/crkc/album-001/3_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/3_2.jpg': /www/libis/html/crkc/album-001/3_2.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/30_1.jpg': /www/libis/html/crkc/album-001/30_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/32_1.jpg': /www/libis/html/crkc/album-001/32_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/33_1.jpg': /www/libis/html/crkc/album-001/33_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/34_1.jpg': /www/libis/html/crkc/album-001/34_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/35_1.jpg': /www/libis/html/crkc/album-001/35_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/36_1.jpg': /www/libis/html/crkc/album-001/36_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/37_1.jpg': /www/libis/html/crkc/album-001/37_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/38_1.jpg': /www/libis/html/crkc/album-001/38_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/39_1.jpg': /www/libis/html/crkc/album-001/39_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/4_1.jpg': /www/libis/html/crkc/album-001/4_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/4_2.jpg': /www/libis/html/crkc/album-001/4_2.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/40_1.jpg': /www/libis/html/crkc/album-001/40_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/41_1.jpg': /www/libis/html/crkc/album-001/41_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/42_1.jpg': /www/libis/html/crkc/album-001/42_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/43_1.jpg': /www/libis/html/crkc/album-001/43_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/44_1.jpg': /www/libis/html/crkc/album-001/44_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/44_3.jpg': /www/libis/html/crkc/album-001/44_3.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/45_1.jpg': /www/libis/html/crkc/album-001/45_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/46_1.jpg': /www/libis/html/crkc/album-001/46_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/47_1.jpg': /www/libis/html/crkc/album-001/47_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/48_1.jpg': /www/libis/html/crkc/album-001/48_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/49_1.jpg': /www/libis/html/crkc/album-001/49_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/5_1.jpg': /www/libis/html/crkc/album-001/5_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/50_1.jpg': /www/libis/html/crkc/album-001/50_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/51_1.jpg': /www/libis/html/crkc/album-001/51_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/52_1.jpg': /www/libis/html/crkc/album-001/52_1.jpg is not a valid URL.
+2012-10-13T15:18:08+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/52_4.jpg': /www/libis/html/crkc/album-001/52_4.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/53_1.jpg': /www/libis/html/crkc/album-001/53_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/54_1.jpg': /www/libis/html/crkc/album-001/54_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/54_4.jpg': /www/libis/html/crkc/album-001/54_4.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/55_1.jpg': /www/libis/html/crkc/album-001/55_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/57_1.jpg': /www/libis/html/crkc/album-001/57_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/58_1.jpg': /www/libis/html/crkc/album-001/58_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/59_1.jpg': /www/libis/html/crkc/album-001/59_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/6_1.jpg': /www/libis/html/crkc/album-001/6_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/61_1.jpg': /www/libis/html/crkc/album-001/61_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/62_1.jpg': /www/libis/html/crkc/album-001/62_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/63_1.jpg': /www/libis/html/crkc/album-001/63_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/66_1.jpg': /www/libis/html/crkc/album-001/66_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/67_1.jpg': /www/libis/html/crkc/album-001/67_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/68_1.jpg': /www/libis/html/crkc/album-001/68_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/68_2.jpg': /www/libis/html/crkc/album-001/68_2.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/69_1.jpg': /www/libis/html/crkc/album-001/69_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/7_1.jpg': /www/libis/html/crkc/album-001/7_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/70_1.jpg': /www/libis/html/crkc/album-001/70_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/71_1.jpg': /www/libis/html/crkc/album-001/71_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/72_1.jpg': /www/libis/html/crkc/album-001/72_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/73_1.jpg': /www/libis/html/crkc/album-001/73_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/74_1.jpg': /www/libis/html/crkc/album-001/74_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/75_1.jpg': /www/libis/html/crkc/album-001/75_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/76_1.jpg': /www/libis/html/crkc/album-001/76_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/77_1.jpg': /www/libis/html/crkc/album-001/77_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/78_1.jpg': /www/libis/html/crkc/album-001/78_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/79_1.jpg': /www/libis/html/crkc/album-001/79_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/8_1.jpg': /www/libis/html/crkc/album-001/8_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/80_1.jpg': /www/libis/html/crkc/album-001/80_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/81_1.jpg': /www/libis/html/crkc/album-001/81_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/82_1.jpg': /www/libis/html/crkc/album-001/82_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/83_1.jpg': /www/libis/html/crkc/album-001/83_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/84_1.jpg': /www/libis/html/crkc/album-001/84_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/85_1.jpg': /www/libis/html/crkc/album-001/85_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/86_1.jpg': /www/libis/html/crkc/album-001/86_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/87_1.jpg': /www/libis/html/crkc/album-001/87_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/88_1.jpg': /www/libis/html/crkc/album-001/88_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/89_1.jpg': /www/libis/html/crkc/album-001/89_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/9_1.jpg': /www/libis/html/crkc/album-001/9_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/90_1.jpg': /www/libis/html/crkc/album-001/90_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/91_1.jpg': /www/libis/html/crkc/album-001/91_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/92_1.jpg': /www/libis/html/crkc/album-001/92_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/93_1.2.jpg': /www/libis/html/crkc/album-001/93_1.2.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/93_1.jpg': /www/libis/html/crkc/album-001/93_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/94_1.jpg': /www/libis/html/crkc/album-001/94_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/95_1.jpg': /www/libis/html/crkc/album-001/95_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/96_1.jpg': /www/libis/html/crkc/album-001/96_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/97_1.jpg': /www/libis/html/crkc/album-001/97_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/97_2.jpg': /www/libis/html/crkc/album-001/97_2.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/98_1.jpg': /www/libis/html/crkc/album-001/98_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/99_1.jpg': /www/libis/html/crkc/album-001/99_1.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/99_2.jpg': /www/libis/html/crkc/album-001/99_2.jpg is not a valid URL.
+2012-10-13T15:18:09+02:00 INFO (6): [CsvImport] Finished importing 0 items (skipped 0 rows).
+2012-10-13T15:23:22+02:00 DEBUG (7): [CsvImport] Started import at: 13-okt.-2012 15:23:22
+2012-10-13T15:23:22+02:00 DEBUG (7): [CsvImport] Item import loop started at: 13-okt.-2012 15:23:22
+2012-10-13T15:23:22+02:00 DEBUG (7): [CsvImport] Memory usage: 11335672
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/10_1.jpg': /www/libis/html/crkc/album-001/10_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/100_1.jpg': /www/libis/html/crkc/album-001/100_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/101_1.jpg': /www/libis/html/crkc/album-001/101_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/102_1.2.jpg': /www/libis/html/crkc/album-001/102_1.2.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/103_1.jpg': /www/libis/html/crkc/album-001/103_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/104_1.jpg': /www/libis/html/crkc/album-001/104_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/105_1.jpg': /www/libis/html/crkc/album-001/105_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/106_1.jpg': /www/libis/html/crkc/album-001/106_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/107_1.jpg': /www/libis/html/crkc/album-001/107_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/108_1.jpg': /www/libis/html/crkc/album-001/108_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/109_1.jpg': /www/libis/html/crkc/album-001/109_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/11_1.jpg': /www/libis/html/crkc/album-001/11_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/110_1.jpg': /www/libis/html/crkc/album-001/110_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/111_1.jpg': /www/libis/html/crkc/album-001/111_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/112_1.jpg': /www/libis/html/crkc/album-001/112_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/113_1.jpg': /www/libis/html/crkc/album-001/113_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/114_1.jpg': /www/libis/html/crkc/album-001/114_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/115_1.jpg': /www/libis/html/crkc/album-001/115_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/115_2.2.jpg': /www/libis/html/crkc/album-001/115_2.2.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/115_2.jpg': /www/libis/html/crkc/album-001/115_2.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/12_1.jpg': /www/libis/html/crkc/album-001/12_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/13_1.jpg': /www/libis/html/crkc/album-001/13_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/14_1.jpg': /www/libis/html/crkc/album-001/14_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/15_1.jpg': /www/libis/html/crkc/album-001/15_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/16_1.jpg': /www/libis/html/crkc/album-001/16_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/18_1.jpg': /www/libis/html/crkc/album-001/18_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/19_1.jpg': /www/libis/html/crkc/album-001/19_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/2_1.jpg': /www/libis/html/crkc/album-001/2_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/2_2.jpg': /www/libis/html/crkc/album-001/2_2.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/20_1.jpg': /www/libis/html/crkc/album-001/20_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/22_1.jpg': /www/libis/html/crkc/album-001/22_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/23_1.jpg': /www/libis/html/crkc/album-001/23_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/25_1.jpg': /www/libis/html/crkc/album-001/25_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/26_1.jpg': /www/libis/html/crkc/album-001/26_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/27_1.jpg': /www/libis/html/crkc/album-001/27_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/28_1.jpg': /www/libis/html/crkc/album-001/28_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/29_1.jpg': /www/libis/html/crkc/album-001/29_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/3_1.jpg': /www/libis/html/crkc/album-001/3_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/3_2.jpg': /www/libis/html/crkc/album-001/3_2.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/30_1.jpg': /www/libis/html/crkc/album-001/30_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/32_1.jpg': /www/libis/html/crkc/album-001/32_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/33_1.jpg': /www/libis/html/crkc/album-001/33_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/34_1.jpg': /www/libis/html/crkc/album-001/34_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/35_1.jpg': /www/libis/html/crkc/album-001/35_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/36_1.jpg': /www/libis/html/crkc/album-001/36_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/37_1.jpg': /www/libis/html/crkc/album-001/37_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/38_1.jpg': /www/libis/html/crkc/album-001/38_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/39_1.jpg': /www/libis/html/crkc/album-001/39_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/4_1.jpg': /www/libis/html/crkc/album-001/4_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/4_2.jpg': /www/libis/html/crkc/album-001/4_2.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/40_1.jpg': /www/libis/html/crkc/album-001/40_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/41_1.jpg': /www/libis/html/crkc/album-001/41_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/42_1.jpg': /www/libis/html/crkc/album-001/42_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/43_1.jpg': /www/libis/html/crkc/album-001/43_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/44_1.jpg': /www/libis/html/crkc/album-001/44_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/44_3.jpg': /www/libis/html/crkc/album-001/44_3.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/45_1.jpg': /www/libis/html/crkc/album-001/45_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/46_1.jpg': /www/libis/html/crkc/album-001/46_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/47_1.jpg': /www/libis/html/crkc/album-001/47_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/48_1.jpg': /www/libis/html/crkc/album-001/48_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/49_1.jpg': /www/libis/html/crkc/album-001/49_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/5_1.jpg': /www/libis/html/crkc/album-001/5_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/50_1.jpg': /www/libis/html/crkc/album-001/50_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/51_1.jpg': /www/libis/html/crkc/album-001/51_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/52_1.jpg': /www/libis/html/crkc/album-001/52_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/52_4.jpg': /www/libis/html/crkc/album-001/52_4.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/53_1.jpg': /www/libis/html/crkc/album-001/53_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/54_1.jpg': /www/libis/html/crkc/album-001/54_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/54_4.jpg': /www/libis/html/crkc/album-001/54_4.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/55_1.jpg': /www/libis/html/crkc/album-001/55_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/57_1.jpg': /www/libis/html/crkc/album-001/57_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/58_1.jpg': /www/libis/html/crkc/album-001/58_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/59_1.jpg': /www/libis/html/crkc/album-001/59_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/6_1.jpg': /www/libis/html/crkc/album-001/6_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/61_1.jpg': /www/libis/html/crkc/album-001/61_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/62_1.jpg': /www/libis/html/crkc/album-001/62_1.jpg is not a valid URL.
+2012-10-13T15:23:22+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/63_1.jpg': /www/libis/html/crkc/album-001/63_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/66_1.jpg': /www/libis/html/crkc/album-001/66_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/67_1.jpg': /www/libis/html/crkc/album-001/67_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/68_1.jpg': /www/libis/html/crkc/album-001/68_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/68_2.jpg': /www/libis/html/crkc/album-001/68_2.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/69_1.jpg': /www/libis/html/crkc/album-001/69_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/7_1.jpg': /www/libis/html/crkc/album-001/7_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/70_1.jpg': /www/libis/html/crkc/album-001/70_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/71_1.jpg': /www/libis/html/crkc/album-001/71_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/72_1.jpg': /www/libis/html/crkc/album-001/72_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/73_1.jpg': /www/libis/html/crkc/album-001/73_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/74_1.jpg': /www/libis/html/crkc/album-001/74_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/75_1.jpg': /www/libis/html/crkc/album-001/75_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/76_1.jpg': /www/libis/html/crkc/album-001/76_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/77_1.jpg': /www/libis/html/crkc/album-001/77_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/78_1.jpg': /www/libis/html/crkc/album-001/78_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/79_1.jpg': /www/libis/html/crkc/album-001/79_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/8_1.jpg': /www/libis/html/crkc/album-001/8_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/80_1.jpg': /www/libis/html/crkc/album-001/80_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/81_1.jpg': /www/libis/html/crkc/album-001/81_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/82_1.jpg': /www/libis/html/crkc/album-001/82_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/83_1.jpg': /www/libis/html/crkc/album-001/83_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/84_1.jpg': /www/libis/html/crkc/album-001/84_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/85_1.jpg': /www/libis/html/crkc/album-001/85_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/86_1.jpg': /www/libis/html/crkc/album-001/86_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/87_1.jpg': /www/libis/html/crkc/album-001/87_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/88_1.jpg': /www/libis/html/crkc/album-001/88_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/89_1.jpg': /www/libis/html/crkc/album-001/89_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/9_1.jpg': /www/libis/html/crkc/album-001/9_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/90_1.jpg': /www/libis/html/crkc/album-001/90_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/91_1.jpg': /www/libis/html/crkc/album-001/91_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/92_1.jpg': /www/libis/html/crkc/album-001/92_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/93_1.2.jpg': /www/libis/html/crkc/album-001/93_1.2.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/93_1.jpg': /www/libis/html/crkc/album-001/93_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/94_1.jpg': /www/libis/html/crkc/album-001/94_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/95_1.jpg': /www/libis/html/crkc/album-001/95_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/96_1.jpg': /www/libis/html/crkc/album-001/96_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/97_1.jpg': /www/libis/html/crkc/album-001/97_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/97_2.jpg': /www/libis/html/crkc/album-001/97_2.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/98_1.jpg': /www/libis/html/crkc/album-001/98_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/99_1.jpg': /www/libis/html/crkc/album-001/99_1.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: '/www/libis/html/crkc/album-001/99_2.jpg': /www/libis/html/crkc/album-001/99_2.jpg is not a valid URL.
+2012-10-13T15:23:23+02:00 INFO (6): [CsvImport] Finished importing 0 items (skipped 0 rows).
+2012-10-13T15:28:48+02:00 DEBUG (7): [CsvImport] Started import at: 13-okt.-2012 15:28:48
+2012-10-13T15:28:48+02:00 DEBUG (7): [CsvImport] Item import loop started at: 13-okt.-2012 15:28:48
+2012-10-13T15:28:48+02:00 DEBUG (7): [CsvImport] Memory usage: 11314304
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/10_1.jpg': file:///www/libis/html/crkc/album-001/10_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/100_1.jpg': file:///www/libis/html/crkc/album-001/100_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/101_1.jpg': file:///www/libis/html/crkc/album-001/101_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/102_1.2.jpg': file:///www/libis/html/crkc/album-001/102_1.2.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/103_1.jpg': file:///www/libis/html/crkc/album-001/103_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/104_1.jpg': file:///www/libis/html/crkc/album-001/104_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/105_1.jpg': file:///www/libis/html/crkc/album-001/105_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/106_1.jpg': file:///www/libis/html/crkc/album-001/106_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/107_1.jpg': file:///www/libis/html/crkc/album-001/107_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/108_1.jpg': file:///www/libis/html/crkc/album-001/108_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/109_1.jpg': file:///www/libis/html/crkc/album-001/109_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/11_1.jpg': file:///www/libis/html/crkc/album-001/11_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/110_1.jpg': file:///www/libis/html/crkc/album-001/110_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/111_1.jpg': file:///www/libis/html/crkc/album-001/111_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/112_1.jpg': file:///www/libis/html/crkc/album-001/112_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/113_1.jpg': file:///www/libis/html/crkc/album-001/113_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/114_1.jpg': file:///www/libis/html/crkc/album-001/114_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/115_1.jpg': file:///www/libis/html/crkc/album-001/115_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/115_2.2.jpg': file:///www/libis/html/crkc/album-001/115_2.2.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/115_2.jpg': file:///www/libis/html/crkc/album-001/115_2.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/12_1.jpg': file:///www/libis/html/crkc/album-001/12_1.jpg is not a valid URL.
+2012-10-13T15:28:48+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/13_1.jpg': file:///www/libis/html/crkc/album-001/13_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/14_1.jpg': file:///www/libis/html/crkc/album-001/14_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/15_1.jpg': file:///www/libis/html/crkc/album-001/15_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/16_1.jpg': file:///www/libis/html/crkc/album-001/16_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/18_1.jpg': file:///www/libis/html/crkc/album-001/18_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/19_1.jpg': file:///www/libis/html/crkc/album-001/19_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/2_1.jpg': file:///www/libis/html/crkc/album-001/2_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/2_2.jpg': file:///www/libis/html/crkc/album-001/2_2.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/20_1.jpg': file:///www/libis/html/crkc/album-001/20_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/22_1.jpg': file:///www/libis/html/crkc/album-001/22_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/23_1.jpg': file:///www/libis/html/crkc/album-001/23_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/25_1.jpg': file:///www/libis/html/crkc/album-001/25_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/26_1.jpg': file:///www/libis/html/crkc/album-001/26_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/27_1.jpg': file:///www/libis/html/crkc/album-001/27_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/28_1.jpg': file:///www/libis/html/crkc/album-001/28_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/29_1.jpg': file:///www/libis/html/crkc/album-001/29_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/3_1.jpg': file:///www/libis/html/crkc/album-001/3_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/3_2.jpg': file:///www/libis/html/crkc/album-001/3_2.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/30_1.jpg': file:///www/libis/html/crkc/album-001/30_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/32_1.jpg': file:///www/libis/html/crkc/album-001/32_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/33_1.jpg': file:///www/libis/html/crkc/album-001/33_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/34_1.jpg': file:///www/libis/html/crkc/album-001/34_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/35_1.jpg': file:///www/libis/html/crkc/album-001/35_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/36_1.jpg': file:///www/libis/html/crkc/album-001/36_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/37_1.jpg': file:///www/libis/html/crkc/album-001/37_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/38_1.jpg': file:///www/libis/html/crkc/album-001/38_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/39_1.jpg': file:///www/libis/html/crkc/album-001/39_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/4_1.jpg': file:///www/libis/html/crkc/album-001/4_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/4_2.jpg': file:///www/libis/html/crkc/album-001/4_2.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/40_1.jpg': file:///www/libis/html/crkc/album-001/40_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/41_1.jpg': file:///www/libis/html/crkc/album-001/41_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/42_1.jpg': file:///www/libis/html/crkc/album-001/42_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/43_1.jpg': file:///www/libis/html/crkc/album-001/43_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/44_1.jpg': file:///www/libis/html/crkc/album-001/44_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/44_3.jpg': file:///www/libis/html/crkc/album-001/44_3.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/45_1.jpg': file:///www/libis/html/crkc/album-001/45_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/46_1.jpg': file:///www/libis/html/crkc/album-001/46_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/47_1.jpg': file:///www/libis/html/crkc/album-001/47_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/48_1.jpg': file:///www/libis/html/crkc/album-001/48_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/49_1.jpg': file:///www/libis/html/crkc/album-001/49_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/5_1.jpg': file:///www/libis/html/crkc/album-001/5_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/50_1.jpg': file:///www/libis/html/crkc/album-001/50_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/51_1.jpg': file:///www/libis/html/crkc/album-001/51_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/52_1.jpg': file:///www/libis/html/crkc/album-001/52_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/52_4.jpg': file:///www/libis/html/crkc/album-001/52_4.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/53_1.jpg': file:///www/libis/html/crkc/album-001/53_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/54_1.jpg': file:///www/libis/html/crkc/album-001/54_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/54_4.jpg': file:///www/libis/html/crkc/album-001/54_4.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/55_1.jpg': file:///www/libis/html/crkc/album-001/55_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/57_1.jpg': file:///www/libis/html/crkc/album-001/57_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/58_1.jpg': file:///www/libis/html/crkc/album-001/58_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/59_1.jpg': file:///www/libis/html/crkc/album-001/59_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/6_1.jpg': file:///www/libis/html/crkc/album-001/6_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/61_1.jpg': file:///www/libis/html/crkc/album-001/61_1.jpg is not a valid URL.
+2012-10-13T15:28:49+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/62_1.jpg': file:///www/libis/html/crkc/album-001/62_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/63_1.jpg': file:///www/libis/html/crkc/album-001/63_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/66_1.jpg': file:///www/libis/html/crkc/album-001/66_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/67_1.jpg': file:///www/libis/html/crkc/album-001/67_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/68_1.jpg': file:///www/libis/html/crkc/album-001/68_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/68_2.jpg': file:///www/libis/html/crkc/album-001/68_2.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/69_1.jpg': file:///www/libis/html/crkc/album-001/69_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/7_1.jpg': file:///www/libis/html/crkc/album-001/7_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/70_1.jpg': file:///www/libis/html/crkc/album-001/70_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/71_1.jpg': file:///www/libis/html/crkc/album-001/71_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/72_1.jpg': file:///www/libis/html/crkc/album-001/72_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/73_1.jpg': file:///www/libis/html/crkc/album-001/73_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/74_1.jpg': file:///www/libis/html/crkc/album-001/74_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/75_1.jpg': file:///www/libis/html/crkc/album-001/75_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/76_1.jpg': file:///www/libis/html/crkc/album-001/76_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/77_1.jpg': file:///www/libis/html/crkc/album-001/77_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/78_1.jpg': file:///www/libis/html/crkc/album-001/78_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/79_1.jpg': file:///www/libis/html/crkc/album-001/79_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/8_1.jpg': file:///www/libis/html/crkc/album-001/8_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/80_1.jpg': file:///www/libis/html/crkc/album-001/80_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/81_1.jpg': file:///www/libis/html/crkc/album-001/81_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/82_1.jpg': file:///www/libis/html/crkc/album-001/82_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/83_1.jpg': file:///www/libis/html/crkc/album-001/83_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/84_1.jpg': file:///www/libis/html/crkc/album-001/84_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/85_1.jpg': file:///www/libis/html/crkc/album-001/85_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/86_1.jpg': file:///www/libis/html/crkc/album-001/86_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/87_1.jpg': file:///www/libis/html/crkc/album-001/87_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/88_1.jpg': file:///www/libis/html/crkc/album-001/88_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/89_1.jpg': file:///www/libis/html/crkc/album-001/89_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/9_1.jpg': file:///www/libis/html/crkc/album-001/9_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/90_1.jpg': file:///www/libis/html/crkc/album-001/90_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/91_1.jpg': file:///www/libis/html/crkc/album-001/91_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/92_1.jpg': file:///www/libis/html/crkc/album-001/92_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/93_1.2.jpg': file:///www/libis/html/crkc/album-001/93_1.2.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/93_1.jpg': file:///www/libis/html/crkc/album-001/93_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/94_1.jpg': file:///www/libis/html/crkc/album-001/94_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/95_1.jpg': file:///www/libis/html/crkc/album-001/95_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/96_1.jpg': file:///www/libis/html/crkc/album-001/96_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/97_1.jpg': file:///www/libis/html/crkc/album-001/97_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/97_2.jpg': file:///www/libis/html/crkc/album-001/97_2.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/98_1.jpg': file:///www/libis/html/crkc/album-001/98_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/99_1.jpg': file:///www/libis/html/crkc/album-001/99_1.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Error occurred when attempting to ingest the following URL as a file: 'file:///www/libis/html/crkc/album-001/99_2.jpg': file:///www/libis/html/crkc/album-001/99_2.jpg is not a valid URL.
+2012-10-13T15:28:50+02:00 INFO (6): [CsvImport] Finished importing 0 items (skipped 0 rows).
+2012-10-13T15:33:55+02:00 DEBUG (7): [CsvImport] Started import at: 13-okt.-2012 15:33:55
+2012-10-13T15:33:55+02:00 DEBUG (7): [CsvImport] Item import loop started at: 13-okt.-2012 15:33:55
+2012-10-13T15:33:55+02:00 DEBUG (7): [CsvImport] Memory usage: 11306976
+2012-10-13T15:34:05+02:00 ERR (3): [CsvImport] exception 'Omeka_File_Ingest_Exception' with message 'Could not transfer the file from "http://aleph08.libis.kuleuven.be:8881/download/KFL638JD/album-001/10_1.jpg" to "/www/libis/html/crkc/archive/files/5bb12276ae597ab4ac0d3b5cb4116b4f.jpg": Unable to Connect to tcp://aleph08.libis.kuleuven.be:8881. Error #110: Connection timed out' in /www/libis/html/crkc/application/libraries/Omeka/File/Ingest/Url.php:70
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Omeka/File/Ingest/Source.php(128): Omeka_File_Ingest_Url->_transfer('http://aleph08....', '/www/libis/html...', Array)
+#1 /www/libis/html/crkc/application/libraries/Omeka/File/Ingest/Abstract.php(176): Omeka_File_Ingest_Source->_transferFile(Array, 'http://aleph08....')
+#2 /www/libis/html/crkc/application/models/ItemBuilder.php(209): Omeka_File_Ingest_Abstract->ingest('http://aleph08....')
+#3 /www/libis/html/crkc/application/libraries/globals.php(505): ItemBuilder->addFiles('Url', 'http://aleph08....', Array)
+#4 /www/libis/html/crkc/plugins/CsvImport/models/CsvImport/Import.php(366): insert_files_for_item(Object(Item), 'Url', 'http://aleph08....', Array)
+#5 /www/libis/html/crkc/plugins/CsvImport/models/CsvImport/Import.php(261): CsvImport_Import->_addItemFromRow(Array, Array, Object(CsvImport_ColumnMap_Set))
+#6 /www/libis/html/crkc/plugins/CsvImport/models/CsvImport/Import.php(203): CsvImport_Import->_importLoop(0)
+#7 [internal function]: CsvImport_Import->start()
+#8 /www/libis/html/crkc/plugins/CsvImport/models/CsvImport/ImportTask.php(22): call_user_func(Array)
+#9 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Adapter/Synchronous.php(25): CsvImport_ImportTask->perform()
+#10 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Default.php(95): Omeka_Job_Dispatcher_Adapter_Synchronous->send('{"className":"C...', Array)
+#11 /www/libis/html/crkc/plugins/CsvImport/controllers/IndexController.php(138): Omeka_Job_Dispatcher_Default->send('CsvImport_Impor...', Array)
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): CsvImport_IndexController->mapColumnsAction()
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('mapColumnsActio...')
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#15 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#16 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#17 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#18 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#19 {main}
+2012-10-13T15:34:05+02:00 ERR (3): exception 'Omeka_File_Ingest_Exception' with message 'Could not transfer the file from "http://aleph08.libis.kuleuven.be:8881/download/KFL638JD/album-001/10_1.jpg" to "/www/libis/html/crkc/archive/files/5bb12276ae597ab4ac0d3b5cb4116b4f.jpg": Unable to Connect to tcp://aleph08.libis.kuleuven.be:8881. Error #110: Connection timed out' in /www/libis/html/crkc/application/libraries/Omeka/File/Ingest/Url.php:70
+Stack trace:
+#0 /www/libis/html/crkc/application/libraries/Omeka/File/Ingest/Source.php(128): Omeka_File_Ingest_Url->_transfer('http://aleph08....', '/www/libis/html...', Array)
+#1 /www/libis/html/crkc/application/libraries/Omeka/File/Ingest/Abstract.php(176): Omeka_File_Ingest_Source->_transferFile(Array, 'http://aleph08....')
+#2 /www/libis/html/crkc/application/models/ItemBuilder.php(209): Omeka_File_Ingest_Abstract->ingest('http://aleph08....')
+#3 /www/libis/html/crkc/application/libraries/globals.php(505): ItemBuilder->addFiles('Url', 'http://aleph08....', Array)
+#4 /www/libis/html/crkc/plugins/CsvImport/models/CsvImport/Import.php(366): insert_files_for_item(Object(Item), 'Url', 'http://aleph08....', Array)
+#5 /www/libis/html/crkc/plugins/CsvImport/models/CsvImport/Import.php(261): CsvImport_Import->_addItemFromRow(Array, Array, Object(CsvImport_ColumnMap_Set))
+#6 /www/libis/html/crkc/plugins/CsvImport/models/CsvImport/Import.php(203): CsvImport_Import->_importLoop(0)
+#7 [internal function]: CsvImport_Import->start()
+#8 /www/libis/html/crkc/plugins/CsvImport/models/CsvImport/ImportTask.php(22): call_user_func(Array)
+#9 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Adapter/Synchronous.php(25): CsvImport_ImportTask->perform()
+#10 /www/libis/html/crkc/application/libraries/Omeka/Job/Dispatcher/Default.php(95): Omeka_Job_Dispatcher_Adapter_Synchronous->send('{"className":"C...', Array)
+#11 /www/libis/html/crkc/plugins/CsvImport/controllers/IndexController.php(138): Omeka_Job_Dispatcher_Default->send('CsvImport_Impor...', Array)
+#12 /www/libis/html/crkc/application/libraries/Zend/Controller/Action.php(516): CsvImport_IndexController->mapColumnsAction()
+#13 /www/libis/html/crkc/application/libraries/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('mapColumnsActio...')
+#14 /www/libis/html/crkc/application/libraries/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#15 /www/libis/html/crkc/application/libraries/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#16 /www/libis/html/crkc/application/libraries/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#17 /www/libis/html/crkc/application/libraries/Omeka/Core.php(165): Zend_Application->run()
+#18 /www/libis/html/crkc/admin/index.php(44): Omeka_Core->run()
+#19 {main}
+2012-10-13T15:38:15+02:00 DEBUG (7): [CsvImport] Started import at: 13-okt.-2012 15:38:15
+2012-10-13T15:38:15+02:00 DEBUG (7): [CsvImport] Item import loop started at: 13-okt.-2012 15:38:15
+2012-10-13T15:38:15+02:00 DEBUG (7): [CsvImport] Memory usage: 11306976
+2012-10-13T09:38:51-04:00 INFO (6): [CsvImport] Finished importing 118 items (skipped 0 rows).
+2012-10-14T13:12:06+02:00 INFO (6): Failed login attempt from '81.82.37.101'.
+2012-10-14T14:12:54+02:00 DEBUG (7): [CsvImport] Started import at: 14-okt.-2012 14:12:54
+2012-10-14T14:12:54+02:00 DEBUG (7): [CsvImport] Item import loop started at: 14-okt.-2012 14:12:54
+2012-10-14T14:12:54+02:00 DEBUG (7): [CsvImport] Memory usage: 8758520
+2012-10-14T08:12:55-04:00 INFO (6): [CsvImport] Finished importing 1 items (skipped 0 rows).
+2012-10-14T14:56:36+02:00 INFO (6): Failed login attempt from '81.82.37.101'.
+2012-10-14T14:56:41+02:00 INFO (6): Failed login attempt from '81.82.37.101'.
+2012-10-14T14:56:48+02:00 INFO (6): Failed login attempt from '81.82.37.101'.
+2012-10-14T15:17:29+02:00 DEBUG (7): [CsvImport] Started import at: 14-okt.-2012 15:17:29
+2012-10-14T15:17:29+02:00 DEBUG (7): [CsvImport] Item import loop started at: 14-okt.-2012 15:17:29
+2012-10-14T15:17:29+02:00 DEBUG (7): [CsvImport] Memory usage: 6761936
+2012-10-14T09:17:30-04:00 INFO (6): [CsvImport] Finished importing 1 items (skipped 0 rows).
+2012-11-09T03:08:30-05:00 WARN (4): Omeka_Storage_Adapter_Filesystem: Tried to delete missing file 'files/e88bf720876deda12934cad5878dd034.JPG'.
+2012-11-09T03:08:30-05:00 WARN (4): Omeka_Storage_Adapter_Filesystem: Tried to delete missing file 'fullsize/e88bf720876deda12934cad5878dd034.jpg'.
+2012-11-09T03:08:30-05:00 WARN (4): Omeka_Storage_Adapter_Filesystem: Tried to delete missing file 'thumbnails/e88bf720876deda12934cad5878dd034.jpg'.
+2012-11-09T03:08:30-05:00 WARN (4): Omeka_Storage_Adapter_Filesystem: Tried to delete missing file 'square_thumbnails/e88bf720876deda12934cad5878dd034.jpg'.
+2012-11-22T11:06:54+01:00 INFO (6): Failed login attempt from '[2001:6a8:2900:5001:b9dd:2c5f:cd37:dba]'.
+2012-11-23T10:07:36+01:00 INFO (6): Failed login attempt from '91.183.124.146'.
+2012-11-23T10:07:40+01:00 INFO (6): Failed login attempt from '91.183.124.146'.
+2012-11-26T17:19:53+01:00 INFO (6): Failed login attempt from '[2001:6a8:2900:5001:997d:be14:fd46:8883]'.
+2012-11-26T17:19:57+01:00 INFO (6): Failed login attempt from '[2001:6a8:2900:5001:997d:be14:fd46:8883]'.
+2012-11-26T17:20:01+01:00 INFO (6): Failed login attempt from '[2001:6a8:2900:5001:997d:be14:fd46:8883]'.
+2012-11-26T17:20:06+01:00 INFO (6): Failed login attempt from '[2001:6a8:2900:5001:997d:be14:fd46:8883]'.
+2012-11-28T11:24:05+01:00 INFO (6): Failed login attempt from '10.32.32.151'.
