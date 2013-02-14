@@ -44,7 +44,8 @@ jQuery(document).ready(function($){
 <div id="secondary">
 
     <div class="inhoud">
-    <h1>Aangifte diefstal kunstvoorwerpen</h1>
+    <h2>Aangifte diefstal kunstvoorwerpen</h2>
+    <?php echo get_option('contribution_consent_text');?>
     <br>
     <form method="post" action="" enctype="multipart/form-data">
 		<fieldset id="contribution-contributor-metadata" <?php if (!isset($typeForm)) { echo 'style="display: none;"'; }?>>

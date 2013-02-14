@@ -65,6 +65,8 @@ table {
     border-spacing: 0;
 }
 
+
+
 /* == Generic == */
 body {
 	font-family: Helvetica Neue, Arial, sans-serif;
@@ -109,7 +111,7 @@ body {
 		list-style:decimal inside;
 	}
 	#content ul {
-		list-style-position:inside;
+		
 	}
 	p,
 	ul,
@@ -504,6 +506,11 @@ a.more, .gray-box a,.feed-box a {
 	background: #edf0ea;
 	padding:10px;
 	overflow: hidden
+}
+
+.inhoud ul {
+    margin-left:1.5em;
+    list-style-position: outside;
 }
 
 .hoofdstuk{
