@@ -44,7 +44,7 @@
 			<h2>Erfgoed in breedbeeld</h2>
 			<!-- 4 featured objecten met afbeeldingen (1ste groter dan de volgende 5)-->
 			<?php echo Libis_get_featured_items_and_exhibits(4);?>
-		</div>
+                        <div class="lees-meer-index"><a href="<?php echo uri('items/browse?type=17');?>">Lees meer erfgoed in breedbeeld</a>	</div>
 	</div><!-- end secondary -->
 
 <?php foot(); ?>
