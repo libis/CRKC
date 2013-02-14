@@ -1,7 +1,6 @@
 <?php head(array('title' => item('Dublin Core', 'Title'), 'bodyid'=>'items','bodyclass' => 'show')); ?>
 
 <div id="primary">
-
 	<?php echo Libis_crkc_gray_box();?>
 	<?php $tags = get_tags(array('sort'=>'most'),30); echo tag_cloud($tags,uri('items/browse'));  ?>
 </div>
@@ -142,6 +141,7 @@
 
 	<!-- NIEUWBERICHT -->
 	<?php if(item_has_type('Nieuwsbericht')){ ?>
+            <div class="show-img"><?php echo display_files_for_item(); ?></div>
 		<p><?php echo item('Dublin Core', 'Description');?></p>
 		<?php if(item('Item Type Metadata','URL')):?>
 				<p><label>Meer informatie: </label>
