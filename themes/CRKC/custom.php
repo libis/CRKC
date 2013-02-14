@@ -573,6 +573,11 @@ function Libis_get_actualiteit($numberOfActualiteit=3,$page="actualiteit"){
 	}
 
 	if($Aitems){
+            //sort
+            usort($Aitems, function($a, $b) {
+                return strtotime(item('Item Type Metadata','Startdatum',array(),$a)) - strtotime(item('Item Type Metadata','Startdatum',array(),$b));
+            });
+
             set_items_for_loop($Aitems);
             while(loop_items()){
 
