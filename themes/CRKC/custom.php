@@ -575,7 +575,7 @@ function Libis_get_actualiteit($numberOfActualiteit=3,$page="actualiteit"){
 	if($Aitems){
             //sort
             usort($Aitems, function($a, $b) {
-                return strtotime(date('Y-m-d',item('Item Type Metadata','Startdatum',array(),$a))) - strtotime(date('Y-m-d',item('Item Type Metadata','Startdatum',array(),$b)));
+               return strtotime(item('Item Type Metadata','Startdatum',array(),$a)) - strtotime(item('Item Type Metadata','Startdatum',array(),$b));
             });
 
             set_items_for_loop($Aitems);
