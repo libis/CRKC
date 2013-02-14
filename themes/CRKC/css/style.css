@@ -923,7 +923,7 @@ ul.exhibit-page-nav {
 
 #footer-left{
 	width:310px;
-	height:125px;
+	height:110px;
 	float:left;
 	background:#e8a91a;
 	border-right:10px solid #fff;
@@ -938,16 +938,15 @@ ul.exhibit-page-nav {
 
 #footer-content ul {
 	list-style:none;
-	padding-top:10px;
-
-	width:505px;
+	padding-top:13px;	
 	margin:0 auto;
+        width:600px;
 	overflow:hidden;
 }
 #footer-content li {
 	display:block;
-	float:left;
-	margin: 0 10px;
+	float:left;       
+	margin: 0 5px;
 }
 #footer a:hover {
 	text-decoration:underline;
