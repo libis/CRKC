@@ -573,31 +573,31 @@ function Libis_get_actualiteit($numberOfActualiteit=3,$page="actualiteit"){
 	}
 
 	if($Aitems){
-		set_items_for_loop($Aitems);
-		while(loop_items()):?>
-			<div class='news'>
-				<?php
-				if(item_has_thumbnail()){
-					//return the thumbnail
-					return item_square_thumbnail(array("width" => 50, "class"=>'feed-img'));
-				}
-				if(item('Dublin Core','Title') != "")://niet posten zonder titel?>
-					<h6><?php echo link_to_item(item('Dublin Core', 'Title')); ?></h6>
-					<?php if(item('Item Type Metadata','Startdatum') != "")?>
-						<span class='agenda-datum'>Van <?php echo item('Item Type Metadata', 'Startdatum')?></span>
+            set_items_for_loop($Aitems);
+            while(loop_items()){
 
-						<?php if(item('Item Type Metadata','Einddatum') != "")?>
-							<span class="agenda-datum">tot <?php echo item('Item Type Metadata', 'Einddatum')?></span>
+                echo "<div class='news'>";
 
-						<p><?php echo Libis_excerpt(item('Dublin Core', 'Description'),50,"..."); ?></p>
-						<p><?php echo link_to_item("Lees meer"); ?></p>
-				<?php endif;?>
-				</div>
-			<?php endwhile;
-		} else{?>
-			<p>Er werden geen agendapunten gevonden.</p>
-		<?php }
-		echo"<p><a href='/items/browse?type=Agendapunt'>Lees de volledige agenda</a></p></div>";
+                    if(item_has_thumbnail()){
+                            //return the thumbnail
+                            return item_square_thumbnail(array("width" => 50, "class"=>'feed-img'));
+                    }
+                    if(item('Dublin Core','Title') != ""){//niet posten zonder titel
+                            echo "<h6>".link_to_item(item('Dublin Core', 'Title'))."</h6>";
+                            if(item('Item Type Metadata','Startdatum') != "")
+                                echo "<span class='agenda-datum'>Van ".item('Item Type Metadata', 'Startdatum')." </span>";
+                            if(item('Item Type Metadata','Einddatum') != "")
+                                echo "<span class='agenda-datum'>tot ".item('Item Type Metadata', 'Einddatum')."</span>";
+
+                            echo "<p>".Libis_excerpt(item('Dublin Core', 'Description'),50,"...")."</p>";
+                            echo "<p>".link_to_item("Lees meer")."</p>";
+                    }
+                echo "</div>";
+            }
+       }else{
+            echo "<p>Er werden geen agendapunten gevonden.</p>";
+       }
+       echo"<p><a href='/items/browse?type=Agendapunt'>Lees de volledige agenda</a></p></div>";
 }
 
 
