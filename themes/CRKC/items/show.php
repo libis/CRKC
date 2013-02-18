@@ -11,7 +11,7 @@
 	<h2><?php echo item('Dublin Core', 'Title'); ?></h2>
 
 	<!-- ERFGOED -->
-	<? if(item_has_type('Erfgoed object') || item_has_type('Onder de loep')){?>
+	<?php if(item_has_type('Erfgoed object') || item_has_type('Onder de loep')){?>
 
 	    <div class="show-img">
 			<?php echo digitool_simple_gallery(get_current_item());?>
@@ -117,6 +117,15 @@
 
 	<!-- AGENDAPUNT -->
 	<?php if(item_has_type('Agendapunt')){ ?>
+            <?php if(item_has_files()){?>
+                <div class="show-img">
+                    <?php echo display_files_for_item(
+                    array('linkAttributes'=>array(
+                        'href'=>item('Item Type Metadata','URL')
+                        )
+                    ));?>
+                </div>
+           <?php } ?>
 		<?php if(item('Item Type Metadata','Startdatum') != ""){?>
 			<span class='agenda-datum'>Van <?php echo item('Item Type Metadata', 'Startdatum')?></span>
 		<?php } ?>
@@ -139,18 +148,25 @@
 		<?php } ?>
 	<? } ?>
 
-	<!-- NIEUWBERICHT -->
+    	<!-- NIEUWBERICHT -->
 	<?php if(item_has_type('Nieuwsbericht')){ ?>
-            <div class="show-img"><?php echo display_files_for_item(); ?></div>
-		<p><?php echo item('Dublin Core', 'Description');?></p>
-		<?php if(item('Item Type Metadata','URL')):?>
-				<p><label>Meer informatie: </label>
-				<a href="<?php echo item('Item Type Metadata','URL');?>">
-				<?php echo item('Item Type Metadata','URL');?>?></a>
-			<?php endif;
-
-	}?>
-
+            <?php if(item_has_files()){?>
+                <div class="show-img">
+                    <?php echo display_files_for_item(
+                    array('linkAttributes'=>array(
+                        'href'=>item('Item Type Metadata','URL')
+                        )
+                    ));?>
+                </div>
+           <?php } ?>
+            <p><?php echo item('Dublin Core', 'Description');?></p>
+            <?php if(item('Item Type Metadata','URL')):?>
+                <p><label>Meer informatie: </label>
+                <a href="<?php echo item('Item Type Metadata','URL');?>">
+                <?php echo item('Item Type Metadata','URL');?></a>
+            <?php endif;
+        }?>
+                            
     <?php echo plugin_append_to_items_show(); ?>
 
     <ul class="item-pagination navigation">
