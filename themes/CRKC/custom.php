@@ -564,7 +564,7 @@ function Libis_get_actualiteit($numberOfActualiteit=3,$page="actualiteit"){
 
 	//NIEUWS
 	if($page=="actualiteit"){
- 		echo feedCollector_show('actua-nieuws',10);
+ 		echo feedCollector_show('actua-nieuws',0);
  		//AGENDA
  		echo "<div class='actua-agenda'><h2>Agenda</h2>";
 	}

@@ -23,11 +23,9 @@ function feedCollector_config_form() {
 //process the config_form
 function feedCollector_config() {
 	//get the POST variables from config_form and set them in the DB
-	if($_POST["rss"])
-		set_option('feedCollector_rss',$_POST['rss']);
+	set_option('feedCollector_rss',$_POST['rss']);
 
-	if($_POST["proxy"])
-		set_option('feedCollector_proxy',$_POST['proxy']);
+	set_option('feedCollector_proxy',$_POST['proxy']);
 
 	if($_POST["limit"])
 		set_option('feedCollector_limit',$_POST['limit']);
@@ -56,12 +54,13 @@ function feedCollector_show($class = "feed-box",$newlimit = null) {
 	$rss = get_option('feedCollector_rss');
 
 	$proxy = get_option('feedCollector_proxy');
-	if($newlimit == null || $newlimit== 0){
+	if($newlimit == null){
 		$limit = get_option('feedCollector_limit');
-	}
+	
+        }
 	else{
-		$limit = $newlimit;
-	}
+            $limit = $newlimit;                         
+        }
 
 
 	if(!empty($rss))
@@ -93,8 +92,8 @@ function feedCollector_convertToHtml($feed,$proxy,$limit,$class) {
 	if(!empty($proxy))
 		curl_setopt($ch, CURLOPT_PROXY,$proxy);
 
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
 
 	//get data and close connection
 	$data = curl_exec($ch);
@@ -124,7 +123,10 @@ function feedCollector_convertToHtml($feed,$proxy,$limit,$class) {
 
 function parseRSS($xml,$cnt,$class)
 {
-
+        if($cnt == 0){
+            $cnt = sizeof($xml->channel->title);
+        }
+    
 	$html= "<div class='".$class."'>";
 	$html.= "<h2>".$xml->channel->title."</h2>";
 	$html .= "<div class='news'>";
