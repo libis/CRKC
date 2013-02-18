@@ -475,7 +475,7 @@ function Libis_set_page_images(){
 function Libis_get_featured_items_and_exhibits($length=4){
 	$items = array();
 	// aangepast door Sam ,"type" => "16"
-	$items = get_items(array("featured" => true),$length);
+	$items = get_items(array("featured" => true,'recent' => true),$length);
 
 	//print_r($items);die;//TODO:welk type?
 	$exhibits = exhibit_builder_recent_exhibits($length);
@@ -564,7 +564,7 @@ function Libis_get_actualiteit($numberOfActualiteit=3,$page="actualiteit"){
 
 	//NIEUWS
 	if($page=="actualiteit"){
- 		echo feedCollector_show('actua-nieuws',0);
+ 		echo feedCollector_show('actua-nieuws',10);
  		//AGENDA
  		echo "<div class='actua-agenda'><h2>Agenda</h2>";
 	}
