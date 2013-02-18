@@ -27,8 +27,7 @@ function feedCollector_config() {
 
 	set_option('feedCollector_proxy',$_POST['proxy']);
 
-	if($_POST["limit"])
-		set_option('feedCollector_limit',$_POST['limit']);
+	set_option('feedCollector_limit',$_POST['limit']);
 }
 
 //handle the installation
@@ -124,7 +123,7 @@ function feedCollector_convertToHtml($feed,$proxy,$limit,$class) {
 function parseRSS($xml,$cnt,$class)
 {
         if($cnt == 0){
-            $cnt = sizeof($xml->channel->title);
+            $cnt = sizeof($xml->channel->item);
         }
     
 	$html= "<div class='".$class."'>";
@@ -133,7 +132,7 @@ function parseRSS($xml,$cnt,$class)
 	//$cnt = count($xml->channel->item);
 	for($i=0; $i<$cnt; $i++)
 	{
-		$html .= "<div class='news-entry'>";
+		$html .= "<div class='news-entry  clearfix'>";
 		$url 	= $xml->channel->item[$i]->link;
 		$title 	= $xml->channel->item[$i]->title;
 		$desc = $xml->channel->item[$i]->description;
@@ -151,7 +150,10 @@ function parseRSS($xml,$cnt,$class)
 
 function parseAtom($xml,$cnt,$class)
 {
-
+        if($cnt == 0){
+            $cnt = sizeof($xml->entry);
+        }
+    
 	$html= "<div class='".$class."'>";
 	$html .= "<h2>Nieuws</h2>";
 	$html .= "<div class='news'>";
@@ -159,7 +161,7 @@ function parseAtom($xml,$cnt,$class)
 	$i==1;
 	foreach($xml->entry as $entry)
 	{
-		$html .= "<div class='news-entry'>";
+		$html .= "<div class='news-entry  clearfix'>";
 		//var_dump ($entry);//$urlAtt = $entry->link[$i]->attributes;
 		//echo"<br><br>";
 		/*echo '<pre>';

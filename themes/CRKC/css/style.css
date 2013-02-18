@@ -1025,6 +1025,17 @@ ul.exhibit-page-nav {
 
 }
 
+.clearfix:after {content: ".";
+   display: block; 
+   height: 0; 
+   clear: both; 
+   visibility: hidden;}
+.clearfix {display: inline-table;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+/* End hide from IE-mac */
+/* End clearfix */
+
 
 }/*end @media screen*/
 /* Print Styles */

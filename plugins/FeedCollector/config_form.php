@@ -21,5 +21,6 @@
 	<div class="inputs">
 		<input type="text" name="limit" size="5" value="<?php echo(get_option('feedCollector_limit'));?>">	
 	</div>
-	 <p class="explanation">This has to be a number, no funny stuff!</p> 
+	 <p class="explanation">This has to be a number, no funny stuff!</p>
+         <p class="explanation">No limits? 0 is the answer.</p> 
 </div>
