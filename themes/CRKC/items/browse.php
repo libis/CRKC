@@ -2,6 +2,7 @@
 //als gestolen objecten collectie -> andere titel
 if($_GET['collection'] == 1)
 	$pageTitle = "Gestolen Objecten";
+       
 else
 	$pageTitle = __('Browse Items');
 
@@ -21,7 +22,8 @@ head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
 <div id="secondary">
 	<div class="inhoud">
     <h1><?php echo $pageTitle;?> <?php echo __('(%s total)', total_results()); ?></h1>
-
+    <div id="intro"></div>
+    <script>jQuery("#intro").load('<?php echo uri('intro_diefstal');?> #intro_text');</script>
     <div id="pagination-top" class="pagination-browse"><?php echo pagination_links(); ?></div>
 
     <?php while (loop_items()): ?>
@@ -31,7 +33,7 @@ head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
 
 		<!-- GESTOLEN OBJECT -->
 		<?php if(item_has_type('Gestolen Object')){?>
-
+                
 			<?php if (item_has_thumbnail()): ?>
 	        <div class="item-img">
 	            <?php echo link_to_item(item_thumbnail()); ?>
@@ -77,7 +79,7 @@ head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
 				<?php echo (item('Item Type Metadata','Periode van de diefstal (dag/maand/jaar)'))?></p>
 			<?php } ?>
 
-			<p><a href="<?php echo uri('aangifte?id='.get_current_item()->id);?>">Signaleer object</a></p>
+			<p><a href="<?php echo uri('signaleer?id='.get_current_item()->id);?>">Signaleer object</a></p>
 
 		<?php }
 		elseif(item_has_type('Nieuwsbericht')) {

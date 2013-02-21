@@ -75,6 +75,7 @@ body {
 	/* -- Headings -- */
 	h1 {
 		font-size:1.7em;
+                margin-bottom:20px;
 	}
 	h2 {
 		font-size:1.5em;
@@ -1030,7 +1031,7 @@ ul.exhibit-page-nav {
    height: 0; 
    clear: both; 
    visibility: hidden;}
-.clearfix {display: inline-table;}
+
 /* Hides from IE-mac \*/
 * html .clearfix {height: 1%;}
 /* End hide from IE-mac */
