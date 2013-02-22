@@ -183,6 +183,8 @@ function parseAtom($xml,$cnt,$class)
 		$html .= "</div>";
 		$i++;
 		if($i==$cnt){break;}
+	 // toegevoegd door Sam
+             $image = "";
 
 
 	}
