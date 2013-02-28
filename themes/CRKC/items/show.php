@@ -6,53 +6,45 @@
 </div>
 
 <div id="secondary">
-	<div class="inhoud">
+    <div class="inhoud">
 
 	<h2><?php echo item('Dublin Core', 'Title'); ?></h2>
 
 	<!-- ERFGOED -->
 	<?php if(item_has_type('Erfgoed object') || item_has_type('Onder de loep')){?>
-
-	    <div class="show-img">
-			<?php echo digitool_simple_gallery(get_current_item());?>
-		</div>
-
-        <div class="element">
+        
+        <?php if(digitool_item_has_digitool_url(get_current_item())){ ?>
+            <div class="show-img">
+                <?php echo digitool_simple_gallery(get_current_item());?>
+            </div>
+        <?php } ?>
+        <div class="item-meta">
+            <div class="element">
         	<?php if ($subj = item('Dublin Core', 'Subject')): ?>
+                    <h5>Onderwerp</h5>
+                    <p><?php echo $subj; ?></p>
+		<?php endif; ?>
 
-					<h5>Onderwerp</h5>
-					<p><?php echo $subj; ?></p>
+		<?php if ($descr = item('Dublin Core', 'Description')): ?>
+                    <h5>Beschrijving</h5><p><?php echo $descr; ?></p>
+		<?php endif; ?>
 
-			<?php endif; ?>
+		<?php if ($extent = item('Dublin Core', 'Extent')): ?>
+                    <h5>Afmetingen</h5><p><?php echo $extent; ?></p>
+                <?php endif; ?>
 
-			<?php if ($descr = item('Dublin Core', 'Description')): ?>
+		<?php if ($temp = item('Dublin Core', 'Temporal Coverage', array('delimiter' => ', '))): ?>
+                    <h5>Periode</h5><p><?php echo $temp; ?></p>
+                <?php endif; ?>
 
-					<h5>Beschrijving</h5><p><?php echo $descr; ?></p>
+                <?php if ($type = item('Dublin Core', 'Type', array('delimiter' => ', '))): ?>
+                    <h5>Materiaal en technieken</h5><p><?php echo $type; ?></p>
+		<?php endif; ?>
 
-			<?php endif; ?>
-
-			<?php if ($extent = item('Dublin Core', 'Extent')): ?>
-
-					<h5>Afmetingen</h5><p><?php echo $extent; ?></p>
-
-			<?php endif; ?>
-
-			<?php if ($temp = item('Dublin Core', 'Temporal Coverage', array('delimiter' => ', '))): ?>
-
-					<h5>Periode</h5><p><?php echo $temp; ?></p>
-
-			<?php endif; ?>
-
-			<?php if ($type = item('Dublin Core', 'Type', array('delimiter' => ', '))): ?>
-
-					<h5>Materiaal en technieken</h5><p><?php echo $type; ?></p>
-
-			<?php endif; ?>
-
-			<p>
-				<?php echo Libis_link_to_related_exhibits(get_current_item()->id);?>
-			</p>
-		</div>
+		<p>
+                    <?php echo Libis_link_to_related_exhibits(get_current_item()->id);?>
+		</p>
+	</div>
 
 
 
@@ -74,6 +66,7 @@
 	            <?php echo link_to_item(item_thumbnail()); ?>
 	        </div>
 	        <?php endif; ?>
+        <div class="item-meta">
 	<?php if(item('Dublin Core','Description') != ""){?>
 		<h4>Titel of voorstelling</h4>
 		<p><?php echo (item('Dublin Core','Description'))?></p>
@@ -101,9 +94,9 @@
 			<p><?php echo (item('Dublin Core','Identifier'))?></p>
 		<?php } ?>
 
-		<?php if(item('Item Type Metadata','Politiezone') != ""){?>
+		<?php if(item('Item Type Metadata','Plaats van de diefstal (postcode, gemeente, naam gebouw of instelling)') != ""){?>
 			<h4>Gemeente</h4>
-			<p><?php echo (item('Item Type Metadata','Politiezone'))?></p>
+			<p><?php echo (item('Item Type Metadata','Plaats van de diefstal (postcode, gemeente, naam gebouw of instelling)'))?></p>
 		<?php } ?>
 
 		<?php if(item('Item Type Metadata','Periode van de diefstal (dag/maand/jaar)') != ""){?>
@@ -112,7 +105,7 @@
 		<?php } ?>
 
 		<p><a href="<?php echo uri('aangifte?id='.get_current_item()->id);?>">Signaleer object</a></p>
-
+        </div>
 	<?php }?>
 
 	<!-- AGENDAPUNT -->

@@ -143,6 +143,10 @@ body {
 		float:left;
 		margin-right:10px;
 	}
+        
+        .item-meta {
+            overflow:hidden;
+        }
 
 		/* Navigation Classes*/
 		.navigation {
