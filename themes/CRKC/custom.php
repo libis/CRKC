@@ -589,8 +589,13 @@ function Libis_get_actualiteit($numberOfActualiteit=3,$page="actualiteit"){
                     }
                     if(item('Dublin Core','Title') != ""){//niet posten zonder titel
                             echo "<h6>".link_to_item(item('Dublin Core', 'Title'))."</h6>";
-                            if(item('Item Type Metadata','Startdatum') != "")
-                                echo "<span class='agenda-datum'>Van ".item('Item Type Metadata', 'Startdatum')." </span>";
+                            if(item('Item Type Metadata','Startdatum')!=""){
+                                if(item('Item Type Metadata','Einddatum') != ""){
+                                    echo "<span class='agenda-datum'>Van ".item('Item Type Metadata', 'Startdatum')." </span>";
+                                }else{
+                                    echo "<span class='agenda-datum'>".item('Item Type Metadata', 'Startdatum')." </span>";
+                                }
+                            }    
                             if(item('Item Type Metadata','Einddatum') != "")
                                 echo "<span class='agenda-datum'>tot ".item('Item Type Metadata', 'Einddatum')."</span>";
 
