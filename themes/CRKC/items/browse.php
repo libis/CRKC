@@ -20,7 +20,7 @@ head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
 </div>
 
 <div id="secondary">
-	<div class="inhoud">
+    <div class="inhoud">
     <h1><?php echo $pageTitle;?> <?php echo __('(%s total)', total_results()); ?></h1>
     <?php if($_GET['collection'] == 1){?>
     <div id="intro"></div>
