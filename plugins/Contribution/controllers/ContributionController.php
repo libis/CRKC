@@ -126,7 +126,7 @@ class Contribution_ContributionController extends Omeka_Controller_Action
                 $contributionType = get_db()->getTable('ContributionType')->find($contributionTypeId);
                 $itemTypeId = $contributionType->getItemType()->id;
             } else {
-                $this->flashError('You must select a type for your contribution.');
+                $this->flashError('Je moet akkoord gaan met onze voorwaarden.');
                 return false;
             }
 
@@ -158,8 +158,8 @@ class Contribution_ContributionController extends Omeka_Controller_Action
                 return false;
             } catch (Omeka_File_Ingest_InvalidException $e) {
                 // Copying this cruddy hack
-                if (strstr($e->getMessage(), "The file 'contributed_file' was not uploaded")) {
-                   $this->flashError("You must upload a file when making a {$contributionType->display_name} contribution.");
+                if (strstr($e->getMessage(), "Het bestand 'contributed_file' kon niet worden ingeladen")) {
+                   $this->flashError("Je moet een afbeelding inladen wanneer je een {$contributionType->display_name} indient.");
                 } else {
                     $this->flashError($e->getMessage());
                 }
@@ -304,12 +304,12 @@ class Contribution_ContributionController extends Omeka_Controller_Action
 
         // ReCaptcha ignores the first argument.
         if ($this->_captcha and !$this->_captcha->isValid(null, $_POST)) {
-            $errors[] = 'Your CAPTCHA submission was invalid, please try again.';
+            $errors[] = 'Je CAPTCHA submissie was fout, probeer opnieuw.';
             $isValid = false;
         }
 
         if (!@$post['terms-agree']) {
-            $errors[] = 'You must agree to the Terms and Conditions.';
+            $errors[] = 'Je moet akkoord gaan met onze voorwaarden.';
             $isValid = false;
         }
 

@@ -47,6 +47,7 @@ jQuery(document).ready(function($){
     <h2>Aangifte diefstal kunstvoorwerpen</h2>
     <?php echo get_option('contribution_consent_text');?>
     <br>
+    <?php echo flash(); ?>
     <form method="post" action="" enctype="multipart/form-data">
 		<fieldset id="contribution-contributor-metadata" <?php if (!isset($typeForm)) { echo 'style="display: none;"'; }?>>
             <h5>Persoonlijke informatie</h5>
@@ -94,10 +95,10 @@ jQuery(document).ready(function($){
             <div id="captcha" class="inputs"><?php echo $captchaScript; ?></div>
             <input type="hidden" name="contribution-public" value="0" />
 
-            <p>In order to contribute, you must read and agree to the <a href="<?php echo uri('contribution/terms') ?>" target="_blank">Terms and Conditions.</a></p>
+            <p>Je moet akkoord gaan met onze <a href="<?php echo uri('contribution/terms') ?>" target="_blank">voorwaarden</a>.</p>
             <div class="inputs">
                 <?php echo $this->formCheckbox('terms-agree', $_POST['terms-agree'], null, array('1', '0')); ?>
-                <?php echo $this->formLabel('terms-agree', 'I agree to the Terms and Conditions.'); ?>
+                <?php echo $this->formLabel('terms-agree', 'Ik ga akkoord met de voorwaarden.'); ?>
             </div>
             <?php 
             // Aangepast door Sam. de wijzgingen hier worden niet getoond

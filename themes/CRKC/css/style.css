@@ -930,6 +930,13 @@ ul.exhibit-page-nav {
 	padding:0 10px;
 }
 
+/* == Aangifte == */
+.error{
+    margin-bottom:20px;
+    color:red;
+    font-weight:bold;
+}
+
 /* == Footer == */
 #footer {
 	clear:both;
