@@ -530,6 +530,7 @@ a.more, .gray-box a,.feed-box a {
 img.inline{
 	float:left;
 	margin:0 5px 0px 0;
+        width:70px;
 }
 
 .hoofdstuk h5{}

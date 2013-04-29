@@ -581,14 +581,13 @@ function Libis_get_actualiteit($numberOfActualiteit=3,$page="actualiteit"){
             set_items_for_loop($Aitems);
             while(loop_items()){
 
-                echo "<div class='news'>";
-
-                    if(item_has_thumbnail()){
-                            //return the thumbnail
-                            return item_square_thumbnail(array("width" => 50, "class"=>'feed-img'));
-                    }
+                echo "<div class='news'>";                   
                     if(item('Dublin Core','Title') != ""){//niet posten zonder titel
                             echo "<h6>".link_to_item(item('Dublin Core', 'Title'))."</h6>";
+                             if(item_has_thumbnail()){
+                                //return the thumbnail
+                                echo item_square_thumbnail(array("class"=>'inline'));
+                            }
                             if(item('Item Type Metadata','Startdatum')!=""){
                                 if(item('Item Type Metadata','Einddatum') != ""){
                                     echo "<span class='agenda-datum'>Van ".item('Item Type Metadata', 'Startdatum')." </span>";
