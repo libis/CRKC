@@ -723,6 +723,11 @@ img.inline{
     display: inline-block;
 }
 
+.show-img img{
+    max-width:200px;
+    max-height:500px;
+}
+
 .show-img:after {
 	content: ".";
 	display: block;
