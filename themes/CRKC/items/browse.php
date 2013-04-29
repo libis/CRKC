@@ -22,13 +22,14 @@ head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
 <div id="secondary">
 	<div class="inhoud">
     <h1><?php echo $pageTitle;?> <?php echo __('(%s total)', total_results()); ?></h1>
+    <?php if($_GET['collection'] == 1){?>
     <div id="intro"></div>
     <script>jQuery("#intro").load('<?php echo uri('intro_diefstal');?> #intro_text');</script>
+    <? } ?>
     <div id="pagination-top" class="pagination-browse"><?php echo pagination_links(); ?></div>
 
     <?php while (loop_items()): ?>
     <div class="item hentry">
-
         <div class="item-meta">
 
 		<!-- GESTOLEN OBJECT -->
