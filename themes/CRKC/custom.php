@@ -509,7 +509,7 @@ function Libis_get_featured_items_and_exhibits($length=4){
 			}
 
 			$html .="<h5>".link_to_item(item('Dublin Core','Title',array(),$recent), array(),'show',$recent)."</h5>";
-			$html .="<p>".item('Dublin Core','Description',array(),$recent)."</p>";
+			$html .="<p>".item('Dublin Core','Description',array('snippet'=>'200'),$recent)."</p>";
 			$html .="<p>".link_to_item('Lees meer',array(),'show',$recent)."</p>";
 		}
 		if(get_class($recent)=="Exhibit"){
