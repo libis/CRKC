@@ -94,9 +94,9 @@
 			<p><?php echo (item('Dublin Core','Identifier'))?></p>
 		<?php } ?>
 
-		<?php if(item('Item Type Metadata','Plaats van de diefstal (postcode, gemeente, naam gebouw of instelling)') != ""){?>
+		<?php if(item('Item Type Metadata','Plaats van de diefstal (gebouw)') != ""){?>
 			<h4>Gemeente</h4>
-			<p><?php echo (item('Item Type Metadata','Plaats van de diefstal (postcode, gemeente, naam gebouw of instelling)'))?></p>
+			<p><?php echo (item('Item Type Metadata','Plaats van de diefstal (gebouw)'))?></p>
 		<?php } ?>
 
 		<?php if(item('Item Type Metadata','Periode van de diefstal (dag/maand/jaar)') != ""){?>

@@ -70,9 +70,9 @@ head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
 				<?php echo (item('Dublin Core','Identifier'))?></p>
 			<?php } ?>
 
-			<?php if(item('Item Type Metadata','Politiezone') != ""){?>
-				<p><b>Gemeente:</b>
-				<?php echo (item('Item Type Metadata','Politiezone'))?></p>
+			<?php if(item('Item Type Metadata','Plaats van diefstal') != ""){?>
+				<p><b>Plaats van diefstal:</b>
+				<?php echo (item('Item Type Metadata','Plaats van diefstal'))?></p>
 			<?php } ?>
 
 			<?php if(item('Item Type Metadata','Periode van de diefstal (dag/maand/jaar)') != ""){?>
