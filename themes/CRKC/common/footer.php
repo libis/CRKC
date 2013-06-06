@@ -26,6 +26,7 @@
 
 
 	</div>
+        <?php plugin_footer(); ?>
 </div><!-- end footer -->
 
 </div><!--end wrap-->
