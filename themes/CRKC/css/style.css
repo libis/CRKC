@@ -915,6 +915,12 @@ ul.exhibit-page-nav {
 	margin-left:2em;
 }
 
+.exhibit-item-caption p{
+	margin-bottom:10px;
+	font-weight:700;
+	font-size:90%;
+}
+
 /* == Collections Pages == */
 .collection {
 	padding:10px 20px;

@@ -419,7 +419,8 @@ function exhibit_builder_display_exhibit_thumbnail_gallery($start, $end, $props 
     for ($i=(int)$start; $i <= (int)$end; $i++) { 
         if (exhibit_builder_use_exhibit_page_item($i)) {    
             $html .= "\n" . '<div class="exhibit-item">';
-            $thumbnail = item_image($thumbnailType, $props);
+            $file = digitool_get_thumb_url(exhibit_builder_use_exhibit_page_item($i));
+            $thumbnail = "<img src='".$file."'>";
             $html .= exhibit_builder_link_to_exhibit_item($thumbnail);
             $html .= exhibit_builder_exhibit_display_caption($i);
             $html .= '</div>' . "\n";
@@ -488,9 +489,9 @@ function exhibit_builder_exhibit_display_item($displayFilesOptions = array(), $l
     
     // Pass null as the 3rd arg so that it doesn't output the item-file div.
     $fileWrapperClass = null;
-    $file = $item->Files[$fileIndex];
+    $file = digitool_get_thumb_url($item);//$item->Files[$fileIndex];
     if ($file) {
-        $html = display_file($file, $displayFilesOptions, $fileWrapperClass);
+        $html = "<img src='".$file."'>";//display_file($file, $displayFilesOptions, $fileWrapperClass);
     } else {
         $html = exhibit_builder_link_to_exhibit_item(null, $linkProperties, $item);
     }

@@ -17,9 +17,10 @@
 					
 						<!--<?php echo exhibit_builder_exhibit_display_item(array('imageSize'=>'fullsize'), array('class'=>'permalink')); ?>-->
 						<?php echo exhibit_builder_exhibit_display_caption($i); ?>
-					<?php endif; ?>
-				</div>
-				<?php echo $text; ?>
+                                                 </div>
+                                        <?php endif; ?>
+                                       
+                                    <?php echo $text; ?>
 				</div>			
 			
 			<?php endif; ?>

@@ -1,5 +1,4 @@
 /* CSS for the gallery-full-right layout */
-
 .primary,
 .secondary {
     float:right; 
@@ -23,6 +22,6 @@
 }
 
 .exhibit-item img {
-    max-width: 100%;
+    width: 100%;
 }
 
