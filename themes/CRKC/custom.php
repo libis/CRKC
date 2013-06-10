@@ -791,40 +791,24 @@ function Libis_link_to_related_exhibits($item) {
 	$db = get_db();
 
 	$select = "
-	SELECT e.* FROM {$db->prefix}exhibits e
+	SELECT DISTINCT e.id,s.id,sp.* FROM {$db->prefix}exhibits e
 	INNER JOIN {$db->prefix}sections s ON s.exhibit_id = e.id
 	INNER JOIN {$db->prefix}section_pages sp on sp.section_id = s.id
 	INNER JOIN {$db->prefix}items_section_pages isp ON isp.page_id = sp.id
 	WHERE isp.item_id = ?";
 
-	$exhibits = $db->getTable("Exhibit")->fetchObjects($select,array($item));
-
-	if(!empty($exhibits)) {
-		echo '<h3>In volgende tentoonstellingen</h3>';
-
-		foreach($exhibits as $exhibit) {
-			$pages="";
-			$select2 = "SELECT sp.* FROM {$db->prefix}exhibits e
-					INNER JOIN {$db->prefix}sections s ON s.exhibit_id =".$exhibit->id."
-					INNER JOIN {$db->prefix}section_pages sp on sp.section_id = s.id
-					INNER JOIN {$db->prefix}items_section_pages isp ON isp.page_id = sp.id
-					WHERE isp.item_id =".$item;
-
-			$pages = $db->getTable("ExhibitPage")->fetchObjects($select2);
-
-			echo $exhibit->title.':';
-			if($pages){
-				echo "<ul class='pagestable'>";
-				foreach($pages as $page) {
-					$section = exhibit_builder_get_exhibit_section_by_id($page->section_id);
-					echo '<li><a href="'.exhibit_builder_exhibit_uri($exhibit,$section,$page).'">'.$page->title.'</a></li>';
-
-				}
-				echo "</ul>";
-			}
-
-		}
-
+	$pages = $db->getTable("ExhibitPage")->fetchObjects($select,array($item));
+                    //var_dump($exhibits);die();
+	if(!empty($pages)) {
+            echo '<h3>In volgende tentoonstellingen</h3>';
+            echo "<ul class='pagestable'>";
+            foreach($pages as $page) {
+                $section = exhibit_builder_get_exhibit_section_by_id($page->section_id);
+                $exhibit = exhibit_builder_get_exhibit_by_id($section->exhibit_id);
+                 echo "<li>".$exhibit->title.':<br>';
+                echo '<a href="'.exhibit_builder_exhibit_uri($exhibit,$section,$page).'">'.$page->title.'</a></li>';
+            }
+            echo "</ul>";
 	}
 }
 
