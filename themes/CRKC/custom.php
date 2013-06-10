@@ -800,7 +800,7 @@ function Libis_link_to_related_exhibits($item) {
 	$pages = $db->getTable("ExhibitPage")->fetchObjects($select,array($item));
                     //var_dump($exhibits);die();
 	if(!empty($pages)) {
-            echo '<h3>In volgende tentoonstellingen</h3>';
+            
             $html='';
             foreach($pages as $page) {
                 $section = exhibit_builder_get_exhibit_section_by_id($page->section_id);
@@ -811,6 +811,7 @@ function Libis_link_to_related_exhibits($item) {
                 }          
             }
             if($html!=''){
+                echo '<h3>In volgende tentoonstellingen</h3>';
                 echo "<ul class='pagestable'>";
                 echo $html;
                 echo "</ul>";
