@@ -801,14 +801,20 @@ function Libis_link_to_related_exhibits($item) {
                     //var_dump($exhibits);die();
 	if(!empty($pages)) {
             echo '<h3>In volgende tentoonstellingen</h3>';
-            echo "<ul class='pagestable'>";
+            $html='';
             foreach($pages as $page) {
                 $section = exhibit_builder_get_exhibit_section_by_id($page->section_id);
                 $exhibit = exhibit_builder_get_exhibit_by_id($section->exhibit_id);
-                 echo "<li>".$exhibit->title.':<br>';
-                echo '<a href="'.exhibit_builder_exhibit_uri($exhibit,$section,$page).'">'.$page->title.'</a></li>';
+                if($exhibit->public==1){
+                    $html .= "<li>".$exhibit->title.':<br>';                    
+                    $html .= '<a href="'.exhibit_builder_exhibit_uri($exhibit,$section,$page).'">'.$page->title.'</a></li>';
+                }          
             }
-            echo "</ul>";
+            if($html!=''){
+                echo "<ul class='pagestable'>";
+                echo $html;
+                echo "</ul>";
+            }    
 	}
 }
 
