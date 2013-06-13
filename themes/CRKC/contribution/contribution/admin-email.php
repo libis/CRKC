@@ -21,9 +21,9 @@
     <p><?php echo (item('Item Type Metadata','Periode van de diefstal (dag/maand/jaar)'))?></p>
 <?php } ?>
     
-<?php if(item('Item Type Metadata','Plaats van de diefstal (postcode, gemeente, naam gebouw of instelling)') != ""){?>
-    <h4>Plaats van de diefstal (postcode, gemeente, naam gebouw of instelling)</h4>
-    <p><?php echo (item('Item Type Metadata','Plaats van de diefstal (postcode, gemeente, naam gebouw of instelling)'))?></p>
+<?php if(item('Item Type Metadata','Plaats van diefstal') != ""){?>
+    <h4>Plaats van diefstal</h4>
+    <p><?php echo (item('Item Type Metadata','Plaats van diefstal'))?></p>
 <?php } ?>
     
 <?php if(item('Dublin Core','Title') != ""){?>
