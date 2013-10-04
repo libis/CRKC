@@ -127,7 +127,7 @@ function parseRSS($xml,$cnt,$class)
         }
     
 	$html= "<div class='".$class."'>";
-	$html.= "<h2>".$xml->channel->title."</h2>";
+        $html .= "<h2>Nieuws</h2>";
 	$html .= "<div class='news'>";
 	//$cnt = count($xml->channel->item);
 	for($i=0; $i<$cnt; $i++)
@@ -135,16 +135,25 @@ function parseRSS($xml,$cnt,$class)
 		$html .= "<div class='news-entry  clearfix'>";
 		$url 	= $xml->channel->item[$i]->link;
 		$title 	= $xml->channel->item[$i]->title;
-		$desc = $xml->channel->item[$i]->description;
+		$desc = Libis_excerpt(strip_tags($xml->channel->item[$i]->description),100);
 
 		if($xml->channel->item[$i]->image->url)
 			$image= "<img width=70 class='inline' src='".$xml->channel->item[$i]->image->url."'>";
 		else
 			$image="";
 
-		$html.= '<h6><a href="'.$url.'">'.$title.'</a></h6><p>'.$image.'</p><p>'.$desc.'</p><br>';
+		$html.= '<h6><a href="'.$url.'">'.$title.'</a></h6><p>'.$image.'</p><p>'.$desc.'</p>';
+                $html .= "<a href=".$url.">Lees meer</a>";
+                $html .= "</div>";
 	}
-	$html .= "</div><p><a href='".$xml->channel->link."'>Alle berichten</a></p></div>";
+        $html .= "</div>";
+	//add link to all news
+	// aangepast door Sam, was .$xml->link['href'].
+	//echo $_SERVER['REQUEST_URI'];
+	if($_SERVER['REQUEST_URI'] != '/actualiteit/'){
+		$html .= '<p><a href="/actualiteit/">Lees alle nieuwsberichten</a></p>';
+	}
+	$html .= "</div>";
 	return $html;
 }
 
