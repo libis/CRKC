@@ -108,7 +108,6 @@ jQuery('document').ready(function($){
 		        </ul>
 			</li>
 			<li><a href="/actualiteit/">Actualiteit</a></li>
-			<li><a href="/erfgoededucatie/">Erfgoededucatie</a></li>
 			</ul>
 		</div>
 
