@@ -22,8 +22,13 @@
 <?php } ?>
     
 <?php if(item('Item Type Metadata','Plaats van de diefstal (gebouw)') != ""){?>
-    <h4>Plaats van diefstal</h4>
+    <h4>Plaats van diefstal (gebouw)</h4>
     <p><?php echo (item('Item Type Metadata','Plaats van de diefstal (gebouw)'))?></p>
+<?php } ?>
+
+<?php if(item('Item Type Metadata','Plaats van de diefstal') != ""){?>
+    <h4>Plaats van diefstal</h4>
+    <p><?php echo (item('Item Type Metadata','Plaats van de diefstal'))?></p>
 <?php } ?>
     
 <?php if(item('Dublin Core','Title') != ""){?>
