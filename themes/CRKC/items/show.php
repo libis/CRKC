@@ -95,7 +95,7 @@
 		<?php } ?>
 
 		<?php if(item('Item Type Metadata','Plaats van de diefstal (gebouw)') != ""){?>
-			<h4>Gemeente</h4>
+			<h4>Plaats van de diefstal</h4>
 			<p><?php echo (item('Item Type Metadata','Plaats van de diefstal (gebouw)'))?></p>
 		<?php } ?>
 
