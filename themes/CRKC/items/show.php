@@ -104,7 +104,7 @@
 			<p><?php echo (item('Item Type Metadata','Periode van de diefstal (dag/maand/jaar)'))?></p>
 		<?php } ?>
 
-		<p><a href="<?php echo uri('aangifte?id='.get_current_item()->id);?>">Signaleer object</a></p>
+		<p><a href="<?php echo uri('signaleer/?id='.get_current_item()->id);?>">Signaleer object</a></p>
         </div>
 	<?php }?>
 
