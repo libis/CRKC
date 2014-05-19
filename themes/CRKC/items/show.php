@@ -94,6 +94,10 @@
 			<p><?php echo (item('Dublin Core','Identifier'))?></p>
 		<?php } ?>
 
+		<?php if(item('Item Type Metadata','Plaats van diefstal') != ""){?>
+			<h4>Plaats van de diefstal</h4>
+			<p><?php echo (item('Item Type Metadata','Plaats van diefstal'))?></p>
+		<?php } ?>
 		<?php if(item('Item Type Metadata','Plaats van de diefstal (gebouw)') != ""){?>
 			<h4>Plaats van de diefstal (gebouw)</h4>
 			<p><?php echo (item('Item Type Metadata','Plaats van de diefstal (gebouw)'))?></p>
