@@ -10,7 +10,7 @@
 				  godsdienstige of devotionele  context of met dit doel tot stand kwam
 				   of werd  verworven, hiernaar verwijst of hiermee in verband  staat.</p>
 			</div>
-			<div class="blue-box">
+			<div class="blue-box" style="display:none;">
 				<img title="Ontdek het religieus erfgoed" alt="Ontdek het religieus erfgoed" src="<?php echo img('ontdek-titel.png');?>" ></img>
 				<?php echo simple_search("Zoek",array('id' => 'left-search'),uri('items/browse/?type=Erfgoed object')); ?>
 	    		<div id="box-nav"><a href="/zoeken-meerinfo/">Meer info</a> / <a href="/zoeken-zoektips/">Zoektips</a> / <a href="<?php echo uri('items/advanced-search/?type=Erfgoed object'); ?>">Uitgebreid zoeken</a>

@@ -388,9 +388,13 @@ input#search.textinput:hover, input#search.textinput:focus, #advanced-search-for
 	float:left;
 }
 
+.simple-page #primary, #items #primary,
+.contribution #primary{
+    display:none;
+}
+
 .blue-top{
 	background:#006a8c;
-	height:260px;
 	margin-bottom:10px;
 }
 

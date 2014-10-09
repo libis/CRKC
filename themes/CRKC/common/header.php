@@ -80,7 +80,7 @@ jQuery('document').ready(function($){
     			<a href="<?php echo uri('') ?>"><img src="<?php echo img("title.jpg"); ?>" width="500"></img></a>
     		</div>
     		<div id="search-container">
-    			<?php echo simple_search("Zoek",array('id' => 'top-search'),'items/browse?type=Agendapunt'); ?>
+    			<?php echo simple_search("Zoek",array('id' => 'top-search'),'/items/browse?type=Agendapunt'); ?>
     			<div id="search-nav">
     			<a href="<?php echo uri('/') ?>">Home</a> / <a href="/databank/">CRKC-databank</a> / <a href="/faqs/">FAQ's</a> / <a href="/contact/">Contact</a> / <a href="<?php echo uri('/ca_crkc/') ?>">Log in op de CRKC-databank</a>
     			</div>
