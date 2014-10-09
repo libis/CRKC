@@ -8,8 +8,8 @@
 		<div id="footer-content" class="center-div">
 		<ul>
 				<li><img height=80 src="<?php echo img("LogoCRKC.jpg")?>"/></li>
-				<li><img height=80 src="<?php echo img("LogoAntwerpen.jpg")?>"/></li>
-				<li><img height=80 src="<?php echo img("LogoOostVl.jpg")?>"/></li>
+				<!--<li><img height=80 src="<?php echo img("LogoAntwerpen.jpg")?>"/></li>
+				<li><img height=80 src="<?php echo img("LogoOostVl.jpg")?>"/></li>-->
                                 <li><img height=40 src="<?php echo img("LogoVlaams.gif")?>"/></li>
                                 <li><img height=80 src="<?php echo img("LogoPolitie.gif")?>"/></li>
 				
