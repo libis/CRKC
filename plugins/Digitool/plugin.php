@@ -368,24 +368,27 @@ function digitool_thumbnail($item,$fileFirst = true, $size = "150",$class="",$al
 
 function digitool_simple_gallery($item){
 	$i=0;
-	$url = get_db()->getTable('DigitoolUrl')->findDigitoolUrlByItem($item, false);
-	if(sizeof($url)==1){
-		$thumb = "http://resolver.lias.be/get_pid?stream&usagetype=THUMBNAIL&pid=".$url[0]->pid;
-		$html.="<div id='image'><img src='".$thumb."' /></div>";
-		//$html.= digitool_get_view(get_current_item(), false,150);
-		return $html;
-	}else{
-		foreach($url as $u){
-			$thumb = "http://resolver.lias.be/get_pid?stream&usagetype=THUMBNAIL&pid=".$u->pid;
-			if($i==0){
-				$html.="<div id='image'><img src='".$thumb."' /></div>";
-			}
-			$width = 100/sizeof($url);
-			$width = 50;
-			$html.= "<a href='#' rel='".$thumb."' class='image'><img src='".$thumb."' class='thumb' width='".$width."' height='60' border='0'/></a>";
-			$i++;
-		}
-	}
+        $thumbs = array();
+	$urls = get_db()->getTable('DigitoolUrl')->findDigitoolUrlByItem($item, false);
+        foreach($urls as $url):
+            $thumbs[] = "http://resolver.lias.be/get_pid?stream&usagetype=THUMBNAIL&pid=".$url->pid;
+        endforeach;
+        
+        $files = $item->Files;
+        foreach($files as $file):
+            $thumbs[] = WEB_ROOT."/archive/thumbnails/".$file->archive_filename;
+        endforeach;
+        
+        foreach($thumbs as $thumb):
+            if($i==0){
+                $html.="<div id='image'><img src='".$thumb."' /></div>";
+            }
+            $width = 100/sizeof($url);
+            $width = 50;
+            $html.= "<a href='#' rel='".$thumb."' class='image'><img src='".$thumb."' class='thumb' width='".$width."' height='60' border='0'/></a>";
+            $i++;
+        endforeach;       
+	
 	?>
 
 	<script>
