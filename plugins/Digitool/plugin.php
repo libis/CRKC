@@ -376,7 +376,7 @@ function digitool_simple_gallery($item){
         
         $files = $item->Files;
         foreach($files as $file):
-            $thumbs[] = WEB_ROOT."/archive/thumbnails/".$file->archive_filename;
+            $thumbs[] = WEB_THUMBNAILS."/".$file->archive_filename;
         endforeach;
         
         foreach($thumbs as $thumb):
@@ -387,7 +387,7 @@ function digitool_simple_gallery($item){
             $width = 50;
             $html.= "<a href='#' rel='".$thumb."' class='image'><img src='".$thumb."' class='thumb' width='".$width."' height='60' border='0'/></a>";
             $i++;
-        endforeach;       
+        endforeach;        
 	
 	?>
 
