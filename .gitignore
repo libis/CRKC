@@ -20,4 +20,5 @@
 /.htaccess
 /admin/.htaccess
 /Capfile
+*~
 

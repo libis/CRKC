@@ -21,6 +21,11 @@
     <p><?php echo (item('Item Type Metadata','Periode van de diefstal (dag/maand/jaar)'))?></p>
 <?php } ?>
     
+<?php if(item('Item Type Metadata','Plaats van de diefstal (gebouw)') != ""){?>
+    <h4>Plaats van diefstal (gebouw)</h4>
+    <p><?php echo (item('Item Type Metadata','Plaats van de diefstal (gebouw)'))?></p>
+<?php } ?>
+
 <?php if(item('Item Type Metadata','Plaats van diefstal') != ""){?>
     <h4>Plaats van diefstal</h4>
     <p><?php echo (item('Item Type Metadata','Plaats van diefstal'))?></p>

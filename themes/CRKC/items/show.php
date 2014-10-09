@@ -94,8 +94,12 @@
 			<p><?php echo (item('Dublin Core','Identifier'))?></p>
 		<?php } ?>
 
+		<?php if(item('Item Type Metadata','Plaats van diefstal') != ""){?>
+			<h4>Plaats van de diefstal</h4>
+			<p><?php echo (item('Item Type Metadata','Plaats van diefstal'))?></p>
+		<?php } ?>
 		<?php if(item('Item Type Metadata','Plaats van de diefstal (gebouw)') != ""){?>
-			<h4>Gemeente</h4>
+			<h4>Plaats van de diefstal (gebouw)</h4>
 			<p><?php echo (item('Item Type Metadata','Plaats van de diefstal (gebouw)'))?></p>
 		<?php } ?>
 
@@ -104,7 +108,7 @@
 			<p><?php echo (item('Item Type Metadata','Periode van de diefstal (dag/maand/jaar)'))?></p>
 		<?php } ?>
 
-		<p><a href="<?php echo uri('aangifte?id='.get_current_item()->id);?>">Signaleer object</a></p>
+		<p><a href="<?php echo uri('signaleer/?id='.get_current_item()->id);?>">Signaleer object</a></p>
         </div>
 	<?php }?>
 
