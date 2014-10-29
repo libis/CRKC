@@ -20,5 +20,6 @@
 /.htaccess
 /admin/.htaccess
 /Capfile
+/sitemap.xml
 *~
 
