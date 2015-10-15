@@ -4,15 +4,21 @@ class SignalForm_IndexController extends Omeka_Controller_Action
 	public function indexAction()
 	{	
 	    $name = isset($_POST['name']) ? $_POST['name'] : '';
-		$email = isset($_POST['email']) ? $_POST['email'] : '';;
-		$message = isset($_POST['message']) ? $_POST['message'] : '';;
+            $email = isset($_POST['email']) ? $_POST['email'] : '';;
+            $link = isset($_POST['link']) ? $_POST['link'] : '';;
+            
+            
+            $message .= "Naam: ".$name."\nn";
+            $message .= "E-mailadres: ".$email."\nn";
+            $message .= "link naar object: ".WEB_ROOT.$link."\nn";
+            $message .= "Tip omtrent het gestolen object: ".$_POST['message']."\nn"; 
 
 	    $captchaObj = $this->_setupCaptcha();
 	    
 	    if ($this->getRequest()->isPost()) {    		
     		// If the form submission is valid, then send out the email
     		if ($this->_validateFormSubmission($captchaObj)) {
-				$this->sendEmailNotification($_POST['email'], $_POST['name'], $_POST['message']);
+				$this->sendEmailNotification($_POST['email'], $_POST['name'], $message);
 	            $this->redirect->gotoRoute(array(), 'signal_form_thankyou');
     		}
 	    }	
