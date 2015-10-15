@@ -6,12 +6,12 @@ class SignalForm_IndexController extends Omeka_Controller_Action
 	    $name = isset($_POST['name']) ? $_POST['name'] : '';
             $email = isset($_POST['email']) ? $_POST['email'] : '';;
             $link = isset($_POST['link']) ? $_POST['link'] : '';;
+            $msg = isset($_POST['message']) ? $_POST['message'] : '';;
             
-            
-            $message .= "Naam: ".$name."\nn";
-            $message .= "E-mailadres: ".$email."\nn";
-            $message .= "link naar object: ".WEB_ROOT.$link."\nn";
-            $message .= "Tip omtrent het gestolen object: ".$_POST['message']."\nn"; 
+            $message .= "Naam: ".$name."\n";
+            $message .= "E-mailadres: ".$email."\n";
+            $message .= "link naar object: ".WEB_ROOT.$link."\n";
+            $message .= "Tip omtrent het gestolen object: ".$_POST['message']."\n"; 
 
 	    $captchaObj = $this->_setupCaptcha();
 	    
@@ -31,7 +31,7 @@ class SignalForm_IndexController extends Omeka_Controller_Action
 		    $captcha = '';
 		}
 		
-		$this->view->assign(compact('name','email','message', 'captcha'));
+		$this->view->assign(compact('name','email','msg', 'captcha'));
 	}
 	
 	public function thankyouAction()
