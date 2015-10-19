@@ -75,7 +75,7 @@ function signal_form_define_routes($router)
 	    new Zend_Controller_Router_Route(
 	        SIGNAL_FORM_PAGE_PATH . 'thankyou', 
 	        array(
-	            'module'       => 'signal-formm', 
+	            'module'       => 'signal-form', 
 	            'controller'   => 'index', 
 	            'action'       => 'thankyou', 
 	        )
